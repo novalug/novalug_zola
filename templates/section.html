@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{%- block title -%}
+{{ title_macros::title(page_title=section.title, main_title=config.title) }}
+{%- endblock -%}
+
+{% block header %}
+
+{{ super() }}
+<div style="display: block;">
+{{ section.content | safe }}
+</div>
+{% endblock header %}
+
+
+

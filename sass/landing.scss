@@ -1,0 +1,10 @@
+@import "../themes/terminimal/sass/post";
+
+.landing {
+  @extend .post;
+
+  h1 {
+    border-bottom-style: solid;
+  }
+}
+
