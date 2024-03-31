@@ -1,6 +1,6 @@
 +++
 # this is an auto-converted file
-title = "42 Years of viTeleconference Meeting"
+title = "42 Years of vi - Teleconference Meeting"
 date = "2020-04-01"
 +++
 Presenter(s): Sam Chessman
