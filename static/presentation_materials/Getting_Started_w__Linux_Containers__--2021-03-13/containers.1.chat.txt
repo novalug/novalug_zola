@@ -1,0 +1,71 @@
+NovaLUG - Introduction to Containers
+13-Mar-2021
+(09:16 AM) Peter Larsen: Testing
+(09:26 AM) Peter Larsen: To better view, be sure you pick the "Speaker View" in the lower left corner
+(09:36 AM) Robert Lay: That site showed "404 - Page Not Found" until I clicked the small hamburger menu to the right and selected "Learn" then I see courses available. Looks good.
+(09:38 AM) Jim: The url should be https://learn.openshift.com/subsystems
+(09:42 AM) Thomas Nielsen: Found the speaker view 👍
+(09:45 AM) Thomas Nielsen: the resolution is very low (unreadable?)
+(09:46 AM) kris: same here
+(09:46 AM) Thomas Nielsen: verizon is trying to save bandwith lol
+(09:47 AM) kris: I'd love to re-visit slides
+(09:47 AM) kris: currently those are really blurred for me
+(09:50 AM) John Kennedy: The slides will be posted on the NoVaLUG web site by next weekend.
+(09:50 AM) John Kennedy: Hopefully along with the recording of this presentation
+(09:51 AM) kris: thank you
+(09:53 AM) Charles Head: My picture is on top of Peter's picture.  How do I turn my picture off?
+(09:55 AM) Thomas Nielsen: is there an image/container for android (mobile) (backend)(no gui)
+(09:55 AM) kris: it looks better when you open chat sidebar
+(09:55 AM) kris: while in full screen mode
+(09:55 AM) Thomas Nielsen: something lighter than the android emulator
+(09:58 AM) Thomas Nielsen: can you replace cmd with bash in Windows
+(09:58 AM) Jim: does podman have an equivalent to docker-compose
+(10:03 AM) Mark Fearer: uname
+(10:06 AM) Thomas Nielsen: look a lot cryptic lol
+(10:07 AM) Scott Burns: --rm removes the container, not the image, no?
+(10:09 AM) John Place: --rm deletes teh container when it ends... so you dont have to clean it up seperately
+(10:14 AM) Thomas Nielsen: anyone working in openshift here?
+(10:18 AM) John Kennedy: Thomas - I have not found an android container. Peter will be doing an intro to OpenShift next month.
+(10:19 AM) John Kennedy: Jim - At the moment there is no podman equivalent to docker-compose. I think that is in the road map (and honestly could currently exist)
+(10:20 AM) A. Dave: Podman now supports docker-compose: https://www.redhat.com/sysadmin/podman-docker-compose
+(10:20 AM) John Kennedy: Thanks, Dave.
+(10:20 AM) Hung Ngo: 👍
+(10:25 AM) A. Dave: Podman's "pods" can be used to manage groups of containers. You specify how containers interact as part of a pod, then simply start and stop the pod thereafter. After I got used to pods I didn't miss docker-compose.
+(10:27 AM) Roger B: Are "snaps" containers?
+(10:29 AM) Thomas Nielsen: good question @Rodger
+(10:30 AM) Thomas Nielsen: and what are some other approaches to deal with app dependencies - besides vb/containers/snaps etc
+(10:30 AM) Thomas Nielsen: vm
+(10:30 AM) A. Dave: Snaps are used as packages for applications, however containers are used behind the scenes. 
+(10:31 AM) Roger B: Thanks, Dave. I now see several of them using Xubuntu.
+(10:39 AM) Hung Ngo: @John Kennedy, is this recorded?
+(10:42 AM) Thomas Nielsen: is this another approach to snap? https://appimage.org/
+(10:46 AM) Roger B: For Peter: is there a quick way to maintain / update packages? To know when they need to be updated? / Must they be re-downloaded?
+(10:50 AM) Big Dan: very good presentation Peter!
+(10:54 AM) Mark Fearer: span hardware, i.e., multiple hosts?
+(10:54 AM) John Kennedy: @Hung Ngo - Yes, Peter is recording it. He will get the recording to me and I will put it on YouTube hopefully next weekend.
+(10:56 AM) John Kennedy: Roger - You would kill and restart the container. This only works if you use the "Latest" tag. Many people use version specific tags, though.
+(10:56 AM) Roger B: So, it updates itself! Kool.
+(10:57 AM) John Kennedy: Thomas - App Images are fully contained executables. All libraries are included in the image. They are not stand alone like a container is.
+(10:57 AM) Roger B: JK: Are yu captureing the chat or should I?
+(10:57 AM) Thomas Nielsen: podman is: alias podman=docker
+(10:57 AM) John Kennedy: If you could I would appreciate it, Roger
+(10:58 AM) John Kennedy: If you click the 3 dots to the right ->
+(10:58 AM) John Kennedy: it will let you download the chat
+(11:01 AM) Roger B: I will capture chat.
+(11:02 AM) Thomas Nielsen: ok I just realized that one advantage of containerization is a way to protect the host from harmful apps
+(11:03 AM) Thomas Nielsen: processes
+(11:03 AM) John Kennedy: Thomas, Yes. That is a big aspect of it.
+(11:09 AM) Mark Fearer: lol
+(11:13 AM) Thomas Nielsen: you can put ah on anything - and call it yours lol
+(11:14 AM) Mark Fearer: containers run on single host?
+(11:14 AM) Thomas Nielsen: don't put windows in a container
+(11:17 AM) Thomas Nielsen: the reason being windows in a container cannot join a AD domain as a identity inside the container
+(11:22 AM) Thomas Nielsen: this actually makes me want to work for IBM ...
+(11:25 AM) Mark Fearer: nice demo
+(11:25 AM) Hung Ngo: Thanks Peter
+(11:28 AM) Big Dan: you can find all of the parameters/environment variables in the Dockerfile this allows the container designer to specify exactly what they want passed in to the container and their application
+(11:29 AM) Big Dan: again, stellar presentation Peter! that was a lot of information
+(11:29 AM) A. Dave: Great job, Peter
+(11:29 AM) Scott Burns: Thanks for the presentation!
+(11:29 AM) Peter Larsen: novalug.org/bramble
+(11:29 AM) jm: Thanks Peter! Awesome presentation!

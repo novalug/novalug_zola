@@ -1,0 +1,71 @@
+10:11:25 From Zak Zebrowski To Everyone:
+	https://github.com/japharl/web-identity
+10:12:11 From John Kennedy To Everyone:
+	This is the corrected URL from the About Me slide.
+10:15:05 From Derek To Everyone:
+	is that Hyper-V running your VM?
+10:16:24 From Derek To Everyone:
+	nevermind… I googled my question: https://docs.microsoft.com/en-us/windows/wsl/about
+10:22:44 From wingk To Everyone:
+	Is there a digital method of acknowledging custody of the data? Assuming the copy of data is hashed?
+10:35:47 From roger  b To Everyone:
+	How do you deal with encrypted data sets?
+10:41:22 From Derek To Everyone:
+	I'm tracking
+10:41:33 From Robert To Everyone:
+	When you come across a character set you don’t recognize, how do you determine which is the correct character set to convert to?
+10:41:47 From Peter Larsen To Everyone:
+	Still not sure where this is leading to - if the idea is to understand/investigate content, why is content in non UTF8 not applicable?
+10:49:50 From roger  b To Everyone:
+	What is a real world example of what you are looking at? What looking for?
+10:49:59 From Peter Larsen To Everyone:
+	Rare in the US perhaps?
+10:52:34 From gautam To Everyone:
+	Isn't utf-8 multibyte character set(1 to 4 bytes) so can handle lot more than just single-byte 8-bit char set.
+10:52:41 From Peter Larsen To Everyone:
+	That was really my point. If you're lookign at non US sourced content, it feels a bit odd to claim UTF16 is an "oddball" that isn't common. It may not be common in the US, but that doesn't mean the rest of the world wouldn't use it?  Particular where chinese type characters are used heavily?
+10:53:05 From Peter Larsen To Everyone:
+	Guatam - correct, but that's still an overhead and UTF16 can go further
+10:57:22 From roger  b To Everyone:
+	so your examples are "original" text?
+11:01:07 From Derek To Everyone:
+	busted!
+11:03:17 From roger  b To Everyone:
+	Google is always "listening." Why not worry about someone "watching?"
+11:03:25 From Robert To Everyone:
+	Do criminals purposefully do something with databases to screw up the character set for some reason, to obscure the data or is this due to some other factors?
+11:09:34 From roger  b To Everyone:
+	Example of "strange" Win error?
+11:10:03 From Peter Larsen To Everyone:
+	How do you prove/show that the data in your resulting "converted" DB is that which was ceased from the criminal?
+11:10:52 From Peter Larsen To Everyone:
+	Taken
+11:11:50 From Peter Larsen To Everyone:
+	But if I was being accused I could argue that the DB that you're searching is not mine - it's something created by the authorities?
+11:12:11 From Peter Larsen To Everyone:
+	MITRE being one of the authorities
+11:13:21 From Peter Larsen To Everyone:
+	Let's drop this :D   Too big of a topic for here
+11:15:17 From Derek To Everyone:
+	have to step away for a minute
+11:16:43 From gautam To Everyone:
+	Is sqllite3 integrated with MariaDB or completely separate install from each other. How are they talking to each other?
+11:17:04 From Peter Larsen To Everyone:
+	It seems one of the assumptions here is that the logical setup of the relational database doesn't use objects - ie. custom types or more complex types allowing you to store more than one data-component in a single column, allows you to store big blobs like full documents and a lot more?
+11:17:21 From Peter Larsen To Everyone:
+	It seems to focus on columns as they would appear in very basic traditional setups?
+11:28:00 From Derek To Everyone:
+	sorry if I missed it, where is the default char set configured in the db?  The database itself, tables, rows?
+11:29:03 From Peter Larsen To Everyone:
+	I have - very typical when your usebase is international
+11:38:38 From Robert To Everyone:
+	Yes, good
+11:54:10 From Derek To Everyone:
+	haha, that's the 2nd time I've seen that XKCD this week
+11:58:22 From roger  b To Everyone:
+	Can you synthsize a "fake"  example w/o compromising security,  to illustrate use? 
+	What general specs for hardware you use - ram, etc., for your work?
+11:59:55 From roger  b To Everyone:
+	Ah, thanks on examples.
+12:01:33 From Derek To Everyone:
+	For everyone here... please fill out our 2022 NoVaLug survey. https://forms.gle/ALEkvrSTqFxDnfdDA this will let us know what you want to hear about this year and help drive the direction of what everyone's looking for!
