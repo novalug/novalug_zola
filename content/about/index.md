@@ -19,3 +19,8 @@ Originally created as an entry to a Linux logo competition, Tux is the most comm
 for Linux, although different Linux distributions depict Tux in various styles. The character, 
 also commonly called the Linux mascot, is used in many other Linux programs and as a general 
 symbol for Linux. [Ref: [Wikipedia](https://en.wikipedia.org/wiki/Tux_(mascot))] 
+
+# Contact Us
+
+If you would like contact NoVaLUG, 
+please use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdyC8ANvEhW3L6L9r5Xk_5mXJekfhsIKWGHJr29qty31nihqQ/viewform?usp=sf_link).

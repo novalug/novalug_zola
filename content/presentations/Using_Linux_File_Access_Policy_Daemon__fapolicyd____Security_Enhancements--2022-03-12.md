@@ -3,6 +3,8 @@
 title = "Using Linux File Access Policy Daemon (fapolicyd) / Security Enhancements"
 date = "2022-03-12"
 +++
+Derek will discuss and demonstrate the use the File Access Policy Daemon (fapolicyd), including enhance security on Linux systems.
+
 Presenter(s): Derek Thurston
 
 Materials:

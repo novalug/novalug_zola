@@ -29,11 +29,12 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "Home", url = "$BASE_URL"},
-   
     {name = "About", url = "$BASE_URL/about"},
+    {name = "Meetings", url = "$BASE_URL/meetings"},
     {name = "Presentations", url = "$BASE_URL/presentations"},
     {name = "Area Events", url = "$BASE_URL/events"},
     {name = "Pictures", url = "$BASE_URL/pics"},
+    {name = "Link(ed) List", url = "$BASE_URL/linklist"}
     
 ]
 favicon = "/penguin_novalug.png"
