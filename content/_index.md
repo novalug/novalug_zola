@@ -7,19 +7,19 @@ interest in [Linux](https://www.linux.com/what-is-linux/),
 [Free and Open Source software](https://en.wikipedia.org/wiki/Free_and_open-source_software), and 
 [open knowledge](https://en.wikipedia.org/wiki/Open_knowledge). 
 
-# Mailing List
-
-In addition to the meetings, you can participated in NoVaLUG through our [mailing list](https://lists.firemountain.net/mailman/listinfo/novalug).
-
-* Subscribe [here](https://lists.firemountain.net/mailman/listinfo/novalug).
-* View the archives [here](https://lists.firemountain.net/pipermail/novalug/).
-
 # Meetings
 
 NoVaLUG holds monthly, in-person meetings. Information about meeting announcements, Metro rail access, driving, and parking information 
 can be found [here](@/meetings/index.md).
 
 Past presentations from meetings can be found [here](@/presentations/_index.md).
+
+# Mailing List
+
+In addition to the meetings, you can participated in NoVaLUG through our [mailing list](https://lists.firemountain.net/mailman/listinfo/novalug).
+
+* Subscribe [here](https://lists.firemountain.net/mailman/listinfo/novalug).
+* View the archives [here](https://lists.firemountain.net/pipermail/novalug/).
 
 # Contact Us
 
