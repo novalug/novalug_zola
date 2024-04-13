@@ -8,6 +8,7 @@ On this page:
 * [Location](#location)
 * [Metro Rail Access](#metro)
 * [Parking Instructions](#parking)
+* [Meeting Agendas and Notes](#agendas)
 
 # Meeting Announcements {#announcements}
 
@@ -52,3 +53,7 @@ This is a controlled parking deck, and **validated "chaser" tickets will
 be available at the meeting** so participants will not be charged for parking.
 
 ![](edwin_parking.jpeg)
+
+# Agendas and Notes {#agendas}
+
+Meeting agendas and notes can be found [here](/agendas).
