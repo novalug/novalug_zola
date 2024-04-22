@@ -5,6 +5,7 @@ NoVaLUG holds monthly, in-person meetings.
 
 On this page:
 * [Meeting Announcements](#announcements)
+* [Dates and Times](#dates)
 * [Location](#location)
 * [Metro Rail Access](#metro)
 * [Parking Instructions](#parking)
@@ -21,6 +22,11 @@ can be found in the following places:
 
 Past presentations from meetings can be found [here](@/presentations/_index.md).
 
+# Dates and Time {#dates}
+
+Meetings are normally held the third Saturday of the month from 10am to Noon. However, times may
+vary so check the [meeting announcements](#announcements) to be sure.
+
 # Location {#location}
 
 Our monthly meetings are held at the offices of [Ridgeline International](https://www.ridgelineintl.com/), 
@@ -32,7 +38,7 @@ Address:
     8255 Greensboro Dr, Suite 500
     Tysons Corner, VA
 
-Google [Map](https://maps.app.goo.gl/Khbej6vji4HrPonP7)
+--> Google [Map](https://maps.app.goo.gl/Khbej6vji4HrPonP7)
 
 # Metro Rail Access {#metro}
 

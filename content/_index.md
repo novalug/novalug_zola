@@ -16,7 +16,7 @@ Past presentations from meetings can be found [here](@/presentations/_index.md).
 
 # Mailing List
 
-In addition to the meetings, you can participated in NoVaLUG through our [mailing list](https://lists.firemountain.net/mailman/listinfo/novalug).
+In addition to the meetings, you can participate in NoVaLUG through our [mailing list](https://lists.firemountain.net/mailman/listinfo/novalug).
 
 * Subscribe [here](https://lists.firemountain.net/mailman/listinfo/novalug).
 * View the archives [here](https://lists.firemountain.net/pipermail/novalug/).
