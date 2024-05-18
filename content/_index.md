@@ -21,6 +21,12 @@ In addition to the meetings, you can participate in NoVaLUG through our [mailing
 * Subscribe [here](https://lists.firemountain.net/mailman/listinfo/novalug).
 * View the archives [here](https://lists.firemountain.net/pipermail/novalug/).
 
+# Discord
+
+We also have a Discord server: https://discord.gg/yJyU2fp5
+
+Come hang out and chat with us!
+
 # Contact Us
 
 If you would like contact NoVaLUG, 
