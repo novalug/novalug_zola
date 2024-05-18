@@ -23,7 +23,7 @@ In addition to the meetings, you can participate in NoVaLUG through our [mailing
 
 # Discord
 
-We also have a Discord server: https://discord.gg/yJyU2fp5
+We also have a Discord server: <https://discord.gg/yJyU2fp5>
 
 Come hang out and chat with us!
 
