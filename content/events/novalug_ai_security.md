@@ -12,6 +12,6 @@ Regarding Large Language Models and Artificial
 Intelligence by Kevin Latchford, CCNA, AISEC.
 
 * When: 20 June 2024, 10am to Noon
-* Where: [Edwin Building, Tysons Corner, VA](../meetings.md#location)
+* Where: [Edwin Building, Tysons Corner, VA](../meetings/#location)
 
-See our [meetings](../meetings) for more information.
+See our [meetings](/meetings/) for more information.
