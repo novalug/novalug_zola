@@ -39,3 +39,4 @@ menu_items = [
 ]
 favicon = "/penguin_novalug.png"
 favicon_mimetype = "image/png"
+default_og_image = "penguin_novalug.png"
