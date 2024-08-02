@@ -5,7 +5,7 @@ To have a link placed on this page, please use [this form](https://docs.google.c
 
 # NoVaLUG Participants
   * [Dave Fuller, IT Consulting for Small Business](http://www.raven-linux.tech/)
-  * [Andy Newton](https://fosstodon.org/@rcode3)
+  * [Andy Newton](https://blog.rcode3.com)
   * [Walt Smith](http://waltech.freeshell.org)
   * [Matt Panhans](https://social.librem.one/@mpanhans)
 

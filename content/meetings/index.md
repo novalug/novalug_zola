@@ -4,28 +4,28 @@ title = "Meetings"
 NoVaLUG holds monthly, in-person meetings.
 
 On this page:
-* [Meeting Announcements](#announcements)
-* [Dates and Times](#dates)
+* [In-Meeting Quick Links](#quick_links)
+* [Schedule](#schedule)
 * [Location](#location)
 * [Metro Rail Access](#metro)
 * [Parking Instructions](#parking)
-* [Meeting Agendas and Notes](#agendas)
 
-# Meeting Announcements {#announcements}
+# In-Meeting Quick Links {#quick_links}
 
-Meeting announcements and notifications
-can be found in the following places:
+| [Notes](https://links.novalug.org/notes) | [Slides](https://links.novalug.org/slides) | [Stream](https://links.novalug.org/stream) |
 
-* [Meetup.com](https://www.meetup.com/novalug/)
-* [Mastodon / Fediverse](https://fosstodon.org/@novalug) ([RSS](https://fosstodon.org/@novalug.rss))
-* [The NoVaLUG Mailing List](https://lists.firemountain.net/pipermail/novalug/)
+# Schedule {#schedule}
 
-Past presentations from meetings can be found [here](@/presentations/_index.md).
+Meetings are normally held the third Saturday of the month from 10am to Noon.
+Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug/) or
+[Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule changes.
 
-# Dates and Time {#dates}
-
-Meetings are normally held the third Saturday of the month from 10am to Noon. However, times may
-vary so check the [meeting announcements](#announcements) to be sure.
+| Date              | Topic              |
+| ----------------- | ------------------ |
+| 17 August 2024    | [DNSSEC and DANE](/presentations/17-august-2024-dns-and-dane/) |
+| 21 September 2024 | Linux and Robotics |
+| 19 October 2024   | Topic Pending      |
+| 16 November 2024  | Topic Pending      |
 
 # Location {#location}
 
@@ -60,6 +60,3 @@ be available at the meeting** so participants will not be charged for parking.
 
 ![](edwin_parking.jpeg)
 
-# Agendas and Notes {#agendas}
-
-Meeting agendas and notes can be found [here](/agendas).

@@ -35,7 +35,6 @@ menu_items = [
     {name = "Area Events", url = "$BASE_URL/events"},
     {name = "Pictures", url = "$BASE_URL/pics"},
     {name = "Link(ed) List", url = "$BASE_URL/linklist"}
-    
 ]
 favicon = "/penguin_novalug.png"
 favicon_mimetype = "image/png"

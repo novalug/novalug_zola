@@ -8,3 +8,5 @@ giving tips, tricks, and advice on hunting for a tech job in 2024.
 Slides: [HedgeDoc](https://hedge.novalug.org/TCAw73QvTZWp9vixE0q_RQ#)
 
 Video: [YouTube](https://youtu.be/4IUW6XdG1Kc?si=PZ23kxjgSpt3p6IK)
+
+Meeting Notes: [HedgeDoc](https://hedge.novalug.org/spoZDln1TaSVolOJ_dapjQ#)

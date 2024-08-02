@@ -22,5 +22,5 @@ symbol for Linux. [Ref: [Wikipedia](https://en.wikipedia.org/wiki/Tux_(mascot))]
 
 # Contact Us
 
-If you would like contact NoVaLUG, 
+If you would like contact to NoVaLUG, 
 please use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdyC8ANvEhW3L6L9r5Xk_5mXJekfhsIKWGHJr29qty31nihqQ/viewform?usp=sf_link).

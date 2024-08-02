@@ -14,22 +14,18 @@ can be found [here](@/meetings/index.md).
 
 Past presentations from meetings can be found [here](@/presentations/_index.md).
 
-# Mailing List
+# Participate Online
 
-In addition to the meetings, you can participate in NoVaLUG through our [mailing list](https://lists.firemountain.net/mailman/listinfo/novalug).
-
-* Subscribe [here](https://lists.firemountain.net/mailman/listinfo/novalug).
-* View the archives [here](https://lists.firemountain.net/pipermail/novalug/).
-
-# Discord
-
-We also have a Discord server: <https://discord.gg/9Cc9QsdDbJ>
-
-Come hang out and chat with us!
+* Mailing List
+  * [Subscribe](https://lists.firemountain.net/mailman/listinfo/novalug)
+  * [Archives](https://lists.firemountain.net/pipermail/novalug/)
+* [Mastodon / Fediverse](https://fosstodon.org/@novalug)
+* [Discord](https://discord.gg/9Cc9QsdDbJ)
+* [LinkedIn](https://www.linkedin.com/groups/13065244/)
 
 # Contact Us
 
-If you would like contact NoVaLUG, 
+If you would like contact to NoVaLUG, 
 please use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdyC8ANvEhW3L6L9r5Xk_5mXJekfhsIKWGHJr29qty31nihqQ/viewform?usp=sf_link).
 
 # General Announcements
