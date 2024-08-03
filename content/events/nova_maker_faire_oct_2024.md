@@ -10,4 +10,4 @@ they can do. From engineers to artists to scientists to crafters, Maker Faire is
 
 * When: 20 Ocboter 2024, 10am to 4pm US-ET
 * Where: City of Alexandria High School
-* More Info: https://nova.makerfaire.com/
+* More Info: <https://nova.makerfaire.com/>
