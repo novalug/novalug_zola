@@ -1,13 +1,19 @@
 +++
-title = "DNSSEC and DANE - 17 August 2024"
+title = "DNSSEC and DevOps - 17 August 2024"
 date = "2024-08-17"
 +++
-A presentation on the Security Extensions for DNS (DNSSEC) and DNS-based Authentication of Named Entities (DANE) by John Franklin.
+Improving security and reliability in DevOps deployments.
 
-Slides: TBD
+Presenter: John Franklin.
 
-Meeting Notes: TBD
+Stream: Coming Soon.
 
-Agenda Slides: TBD
+iCal: [.ics](/ics/novalug-aug-24.ics)
 
-Video: TBD
+Slides: Coming Soon.
+
+Meeting Notes: Coming Soon.
+
+Agenda Slides: Coming soon.
+
+Video: Coming Soon.

@@ -20,17 +20,17 @@ Meetings are normally held the third Saturday of the month from 10am to Noon.
 Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug/) or
 [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule changes.
 
-| Date              | Topic              |
-| ----------------- | ------------------ |
-| 17 August 2024    | [DNSSEC and DANE](/presentations/17-august-2024-dns-and-dane/) |
-| 21 September 2024 | Linux and Robotics |
-| 19 October 2024   | Topic Pending      |
-| 16 November 2024  | Topic Pending      |
+| Date              | Topic                                                            | iCal                            |
+| ----------------- | ---------------------------------------------------------------- | ------------------------------- |
+| 17 August 2024    | [DNSSEC and DevOps](/presentations/17-august-2024-dns-and-dane/) | [.ics](/ics/novalug-aug-24.ics) |
+| 21 September 2024 | Linux and Robotics                                               | [.ics](/ics/novalug-sep-24.ics) |
+| 19 October 2024   | Topic Pending                                                    | [.ics](/ics/novalug-oct-24.ics) |
+| 16 November 2024  | Topic Pending                                                    | [.ics](/ics/novalug-nov-24.ics) |
 
 # Location {#location}
 
 Our monthly meetings are held at the offices of [Ridgeline International](https://www.ridgelineintl.com/), 
-which is an 8 minute walk from the Greensboro Metro Station. There is also plenty of parking.
+which is an 8-minute walk from the Greensboro Metro Station. There is also plenty of parking.
 
 Address:
 
@@ -42,7 +42,7 @@ Address:
 
 # Metro Rail Access {#metro}
 
-The following map shows the **8 minute walk** from the _Greensboro Metro Station_.
+The following map shows the **8-minute walk** from the _Greensboro Metro Station_.
 
 ![](metro_to_ridgeline.png)
 
