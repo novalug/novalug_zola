@@ -6,9 +6,9 @@ Improving security and reliability in DevOps deployments.
 
 Presenter: John Franklin.
 
-Stream: Coming Soon.
-
-iCal: [.ics](/ics/novalug-aug-24.ics)
+* When: 17 August 2024, 10am to Noon
+* Where: See our [meetings page](/meetings).
+* iCal: [.ics](/ics/novalug-aug-24.ics)
 
 Slides: Coming Soon.
 
