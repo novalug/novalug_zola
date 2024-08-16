@@ -10,10 +10,10 @@ Presenter: John Franklin.
 * Where: See our [meetings page](/meetings).
 * iCal: [.ics](/ics/novalug-aug-24.ics)
 
-Slides: Coming Soon.
+Slides: [pptx](/presentation_materials/dnssec_and_devops_2024-08-17/DNSSEC-NovaLug.pptx)
 
-Meeting Notes: Coming Soon.
+Meeting Notes: [hedgedoc](https://hedge.novalug.org/5czfFF-oQyu44ygkxBHKhQ#)
 
-Agenda Slides: Coming soon.
+Agenda Slides: [hedgedoc](https://hedge.novalug.org/p/e_0q8joPN#/)
 
 Video: Coming Soon.
