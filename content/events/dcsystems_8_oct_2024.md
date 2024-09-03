@@ -9,8 +9,8 @@ We are focused on high quality talks and expert speakers. Talks about engineerin
 
 For the first one we will have 2 talks from
 
-• Phil Eaton
-• Andrei Matei
+* Phil Eaton
+* Andrei Matei
 
 Food and drinks provided.
 
