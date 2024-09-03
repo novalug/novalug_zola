@@ -1,7 +1,7 @@
 +++
 title = "Translating Business Logic into Code with Drupal's ECA Module (goodbye Rules)"
 # date of event
-date = "2024-9-12"
+date = "2024-09-12"
 +++
 In this presentation, Stan Ascher will dive into the ECA (Event-Condition-Action) module in Drupal, 
 offering a concise summary of its functionality and potential. We will explore how this powerful 
