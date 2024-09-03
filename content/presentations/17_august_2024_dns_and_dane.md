@@ -16,4 +16,4 @@ Meeting Notes: [hedgedoc](https://hedge.novalug.org/5czfFF-oQyu44ygkxBHKhQ#)
 
 Agenda Slides: [hedgedoc](https://hedge.novalug.org/p/e_0q8joPN#/)
 
-Video: Coming Soon.
+Video: Unfortunately, lost.

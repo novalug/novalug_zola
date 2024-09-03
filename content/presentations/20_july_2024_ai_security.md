@@ -10,4 +10,4 @@ Meeting Notes: [HedgeDoc](https://hedge.novalug.org/vILFP68vThSPv6tTM6sbsQ?both)
 
 Agenda Slides: [HedgeDoc](https://hedge.novalug.org/TB92Zi7jSWGOREph-d52tw#)
 
-Video: TBD
+Video: Lost, unfortunately.
