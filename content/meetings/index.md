@@ -25,7 +25,7 @@ Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug
 | 17 August 2024    | [DNSSEC and DevOps](/presentations/17-august-2024-dns-and-dane/) | [.ics](/ics/novalug-aug-24.ics) |
 | 21 September 2024 | Linux and Robotics                                               | [.ics](/ics/novalug-sep-24.ics) |
 | 19 October 2024   | Topic Pending                                                    | [.ics](/ics/novalug-oct-24.ics) |
-| 16 November 2024  | Topic Pending                                                    | [.ics](/ics/novalug-nov-24.ics) |
+| 16 November 2024  | AI: Real World Software Development and DevOps                   | [.ics](/ics/novalug-nov-24.ics) |
 
 # Location {#location}
 
