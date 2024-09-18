@@ -1,5 +1,6 @@
 +++
 title = "Meetings"
+# ics maker at https://ical.marudot.com/
 +++
 NoVaLUG holds monthly, in-person meetings.
 
@@ -22,9 +23,11 @@ Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug
 
 | Date              | Topic                                                            | iCal                            |
 | ----------------- | ---------------------------------------------------------------- | ------------------------------- |
-| 21 September 2024 | [Linux and Robotics](/presentations/21-september-2024-linux-and-robotics/) | [.ics](/ics/novalug-sep-24.ics) |
+| 21 September 2024 | [Robot Operating Systems](/presentations/21-september-2024-linux-and-robotics/) | [.ics](/ics/novalug-sep-24.ics) |
 | 19 October 2024   | Topic Pending                                                    | [.ics](/ics/novalug-oct-24.ics) |
 | 16 November 2024  | AI: Real World Software Development and DevOps                   | [.ics](/ics/novalug-nov-24.ics) |
+| 14 December 2024<br>_Note: this is the second Saturday of the month._  | Topic Pending                                                    | [.ics](/ics/novalug-dec-24.ics) |
+| 18 January 2024   | AI @AWS                                                          | [.ics](/ics/novalug-jan-25.ics) |
 
 # Location {#location}
 

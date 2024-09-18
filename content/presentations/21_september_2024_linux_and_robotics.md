@@ -14,8 +14,8 @@ Presenter: Sravan Balaji.
 
 Slides: TBD
 
-Meeting Notes: TBD
+Meeting Notes: <https://hedge.novalug.org/49-WX7OvQ7qxQnphuIbfZQ?both>
 
-Agenda Slides: TBD
+Agenda Slides: <https://hedge.novalug.org/p/G2MrXqhy_#/>
 
 Video: TBD
