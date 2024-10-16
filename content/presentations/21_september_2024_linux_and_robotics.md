@@ -12,10 +12,10 @@ Presenter: Sravan Balaji.
 * Where: See our [meetings page](/meetings).
 * iCal: [.ics](/ics/novalug-sep-24.ics)
 
-Slides: TBD
+Slides: [html](/presentation_materials/robot_operating_systems/index.html)
 
 Meeting Notes: <https://hedge.novalug.org/49-WX7OvQ7qxQnphuIbfZQ?both>
 
 Agenda Slides: <https://hedge.novalug.org/p/G2MrXqhy_#/>
 
-Video: TBD
+Video: [YouTube](https://youtu.be/Ra5ESAEMQEU?si=YqBhDB9IBnJxSmRb)

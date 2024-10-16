@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Robot Operating Systems
+#### Presented by Sravan Balaji
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/Robot and Penguins.png" alt="" style="width: 600px; object-fit: fill">
+
+
+
+
+notes: Hello everyone, my name is Sravan Balaji. Today I'll be giving a presentation on robot operating systems which I hope will provide a light introduction to some fundamental concepts in autonomous robotics.
+
+We'll start with a quick overview of what robotics is, some examples of autonomous robotic systems out in the real world, how robots work at a high level, and how Linux is used to develop and deploy these autonomous systems - mainly through [ROS, the robot operating system](https://www.ros.org/). 
+
+I included this picture from CNN of a robot interacting with an Emperor penguin colony in Antarctica which I thought nicely tied together today's topics of Robotics and Linux.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[CNN](https://www.cnn.com/videos/us/2022/04/27/climate-change-antarctica-robot-spies-on-penguins-orig-jc.cnn)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Disclaimers
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+Any opinions expressed here are my own and do not necessarily represent the positions or policies of my current or former employers
+
+Information presented here is for educational purposes and does not replace independent professional judgment
+
+notes: While I am not currently, nor have I ever been, a government employee, I feel it is prudent to provide this quick disclaimer. I'm giving this presentation in my personal capacity. Any opinions expressed are not necessarily representative of the positions or policies of any of my current or former employers.
+
+Additionally, the information I'll be sharing is intended for educational purposes only.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Robotics
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+> "Embodied Intelligence that interacts with the physical and human environment"
+
+
+
+notes: For those who are unfamiliar, let's briefly touch on what the field of robotics is through a couple descriptions I found online.
+
+The first, from my Alma mater's website, describes robots as "embodied intelligence that interacts with the physical and human environment."
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[UMICH Robotics](https://robotics.umich.edu/academics/)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Robotics
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+> "A machine capable of carrying out a complex series of actions automatically"
+
+
+
+notes: The second, from Wikipedia, describes robots as "a machine capable of carrying out a complex series of actions automatically."
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Wikipedia](https://en.wikipedia.org/wiki/Robot)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Robotics
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+Hardware
+
+\+
+
+Software
+
+\+
+
+Intelligent Decision Making
+
+ notes: I like to describe robots as hardware + software + some level of intelligent decision making.
+ 
+ This helps differentiate robots from other electro-mechanical systems like a toaster or an electric motor.
+ 
+ In my mind, it's really the autonomy software that makes robots *special* - the ability to interact with and react to changes in the environment.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+### Types of Robots
+
+notes: So, what are some real world examples of robots that people may have seen or heard of?
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Drones
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/quadcopter drone.jpg" alt="" style="width: 800px; object-fit: fill">
+
+
+
+
+notes: Drones, like the quadcopter shown here, have gained a lot of popularity in recent years among tech enthusiasts because they have dramatically come down in price, have decent battery life, are fun to fly, and allow you to take amazing aerial photography that just isn't otherwise possible.
+
+It's a little more difficult to get into this hobby in Northern Virginia due to all the restricted airspace around the capital, but if you're willing to drive a bit farther out, you can have a fun time flying drones around.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[The Washington Post](https://www.npr.org/sections/alltechconsidered/2013/10/26/228486982/no-seat-belts-required-drone-hobbyists-talk-safety)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Autonomous Vehicles
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/waymo vehicle.jpg" alt="" style="width: 700px; object-fit: fill">
+
+
+notes: Another example you might be familiar with is autonomous vehicles or self-driving cars.
+
+They use an array of different sensors and computational algorithms to map out their environment, avoid obstacles, and transport passengers to their destination.
+
+Waymo, a subsidiary of Alphabet, operates self-driving rideshares in Phoenix, San Francisco, and Los Angeles at the moment.
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Getty Images](https://www.theverge.com/2022/11/19/23467784/waymo-provide-fully-driverless-rides-san-francisco-california)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Industrial
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/quipt industrial robot.gif" alt="" style="width: 800px; object-fit: fill">
+
+
+notes: Robots are also widely used in the manufacturing industry because of the repetitive nature of assembly line tasks. However, you can imaging extending the idea of manipulation arms like the ones shown here to mobile systems that could operate in a residential environment and perform tasks like cooking or cleaning autonomously.
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Quipt](https://www.roboticgizmos.com/quipt-gesture-control-for-robots)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Humanoid
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/boston dynamics parkour.gif" alt="" style="width: 600px; object-fit: fill">
+
+
+
+
+notes: Humanoid robots have also been showing up in the news doing amazing thinks like parkour or dance routines. One of the main selling points of these types of robots is that they can navigate and interact with environments designed for humans, unlike wheeled or aerial drones. This would avoid the need to redesign existing environments to work around the limitations of other robot designs.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Boston Dynamics](https://bostondynamics.com/blog/leaps-bounds-and-backflips)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Underwater
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/Cellula.jpg" alt="" style="width: 700px; object-fit: fill">
+
+
+
+
+notes: This one was a little more obscure to me through most of my college and professional career, but is now the domain that I work in.
+
+Unmanned Underwater Vehicles (UUVs) are yet another example of robots. These are widely used in industries like oil & gas because they allow you to more easily inspect pipelines and other infrastructure underwater. These are also pretty widely used in the defense industry, which is where I was first introduced to them.
+
+You can imagine that operating a fully crewed ship to perform underwater inspection can be dangerous, time consuming, and expensive. So there is a lot of interest in introducing more autonomous, or at the very least remotely operated, underwater vehicles.
+
+One of the interesting things I learned when I first started working in this domain is how much harder the problem is compared to other domains like ground or air. In those domains, you have near constant access to GPS and other infrastructure that can provide up-to-date and accurate location information. You can also get pretty decent communication with the vehicle at all times to understand what it is doing.
+
+In the underwater domain, you basically just drop it in the water, wait a while, and hope it returns to the surface safely to see what happened. GPS signal can't penetrate through water and you have no way of communicating with the vehicle unless you attach a fiber optic cable to it which comes with its own disadvantages.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Metron & Cellula Robotics](https://www.cellula.com/news/2024/3/12/metron-and-cellula-robotics-usa-sign-a-strategic-partnership-agreement-to-advance-uuv-capabilities-for-long-duration-operations-in-dynamic-environments)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### And Many More!
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+- Space
+- Consumer
+- Animatronics
+- Exoskeletons
+- Medical
+- etc.
+
+notes: These are just a few, but there are other domains and industry where robots are used like space, consumer (for example, the roomba vacuum), animatronics, exoskeletons, medical (like the surgery robots), and countless others.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+### Embodied Intelligence
+
+notes: Now, I would like to transition to talking a bit about *how* robots work by introducing a useful framework or mental model.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Sense-Plan-Act Paradigm
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->**Sensing** of the environment, external agents, and internal body information to determine state information
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->**Reasoning** with that information to make decisions for guidance, control, and localization
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->**Acting** upon the body and environment to produce motion or other outputs that enable the robot to locomote or interact with the environment
+
+
+
+notes: It's helpful to think about how robots work in the context of how humans perform various tasks.
+
+We use our senses to gain information about our environment, other people, and ourselves.
+
+Then we use that information to make decisions about how to move our body, figure out where we are, and figure out how to get to where we want to go.
+
+Finally, we'll put our decision into motion by actually moving our body and making small adjustments as necessary to make progress towards our goal.
+
+This process is continuously repeated as the environment and our position within it evolves.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[UMICH Robotics](https://robotics.umich.edu/academics/graduate/)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Mars Rover
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<split even>
+<img src="Presentations/Robot Operating Systems/Attachments/Mars Rover Overview.png" alt="" style="width: 500px; object-fit: fill">
+
+<iframe width="500" height="400" src="https://www.youtube-nocookie.com/embed/lBluKAgu8e8?si=5_1EKEcnQViIuJEu&autoplay=1&loop=1&playlist=lBluKAgu8e8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</split>
+
+
+
+notes: Let's use the sense-plan-act paradigm to think about how a Mars rover works.
+
+The Mars rover is a remote-controlled vehicle designed to explore the surface of Mars. Due to the communication latency, newer iterations like Perseverance increasingly leverage autonomous path planning so operators have less to do and can allow the rover to safely move at higher speeds.
+
+The rover starts by collecting data about the environment using stereo vision cameras and other sensors.
+
+It can use the images captured from these cameras to build a map of the surface of mars to identify obstacles or rough terrain.
+
+An operator can provide a general area to go investigate (shown as the blue circle in the video), then the rover will plan a path which avoids obstacles to get to that region (shown as the black and blue lines extending out from the rover).
+
+After figuring out the path, it will need to control its motors so it can actually follow the path it planned out.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[NASA JPL](https://www.nasa.gov/solar-system/nasas-self-driving-perseverance-mars-rover-takes-the-wheel/)
+</div>
+
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+### Sensing
+
+notes: Now let's explore each of these areas in a little more detail, starting with sensing.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Cameras
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<split even>
+<img src="Presentations/Robot Operating Systems/Attachments/realsense D415.png" alt="" style="width: 500px; object-fit: fill">
+
+<img src="Presentations/Robot Operating Systems/Attachments/realsense particle cloud.gif" alt="" style="width: 500px; object-fit: fill">
+
+</split>
+
+
+
+notes: One of the most popular sensors for various applications are cameras. There are specialized cameras like the Intel RealSense here that can capture RGB images as well as depth, allowing autonomous systems to get a 3D view of the world.
+
+The Intel RealSense D415 shown on the left uses stereo cameras, which can be processed into the point cloud shown on the right.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Intel RealSense](https://www.intelrealsense.com/stereo-depth-vision-basics)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### LiDAR
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<split even>
+<img src="Presentations/Robot Operating Systems/Attachments/LIDAR.gif" alt="" style="object-fit: scale-down">
+
+<img src="Presentations/Robot Operating Systems/Attachments/Luminar LIDAR Scan.gif" alt="" style="object-fit: scale-down">
+
+</split>
+
+
+
+notes: Another popular sensor, especially in autonomous vehicles, is LiDAR - Laser imaging, Detection, and Ranging.
+
+This works by shooting a beam of light out and measuring how long it took for the light to reflect off the environment and bounce back to the sensor.
+
+Using the speed of light and the travel time, you can measure the distance of obstacles in the environment and build up a map.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[(Left) Wikipedia](https://en.wikipedia.org/wiki/Lidar) | [(Right) Luminar](https://www.luminartech.com/)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Inertial Measurement Unit
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/Spacecraft IMU.png" alt="" style="width: 700px; object-fit: fill">
+
+
+
+
+notes: So far, we've mostly been talking about sensing the environment, but how does the robot know what direction its facing or how fast it is moving?
+
+An Inertial Measurement Unit (IMU) contains an accelerometer which measures acceleration and a gyroscope which measures angular velocity.
+
+These are typically used in Inertial Navigation Systems (INS) along with GPS to calculate orientation, angular rates, linear velocity, and position.
+
+The one shown here is used in spacecraft, which require very accurate information about where they are, so the IMU ends up being a lot larger and more expensive than the kinds used for other platforms.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Wikipedia](https://en.wikipedia.org/wiki/Inertial_measurement_unit)
+</div>
+
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+### Reasoning
+
+notes: Let's move on to the second area now, reasoning. Once you have raw data from your sensors, what do you do with it and how do you make decisions about what actions to take?
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+#### Simultaneous Localization and Mapping (SLAM)
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<split even>
+<img src="Presentations/Robot Operating Systems/Attachments/SLAM.gif" alt="" style="width: 500px; object-fit: fill">
+
+<img src="Presentations/Robot Operating Systems/Attachments/Particle Filter.gif" alt="" style="width: 500px; object-fit: fill">
+
+</split>
+
+
+
+notes: Imagine you are blindfolded and dropped into an unknown location and need to find your way out. You would probably start by moving around and building a mental map of your environment while keeping track of key landmarks so you can figure out where you are. This is basically how algorithms like Simultaneous Localization and Mapping (SLAM) work. The robot uses sensor readings to build a map based on what it can currently see. Then, it moves around and updates its estimate of where it is in the map. This is called localization. This process is continuously repeated to produce results like those shown in the figure on the left.
+
+One of them most commonly used localization techniques is the particle filter. This is a type of Kalman Filter that represents probability distributions as a set of particle estimates rather than mathematical distributions like a Gaussian. The figure on the right shows how the particle distribution is initially evenly spread across the entire map, meaning the robot has no idea where it is. As it moves around and collects data, it is able to refine its estimate by comparing the sensor reading it actually measures to what the sensor reading theoretically would have been at each of the estimate locations. The particles that best match the sensor readings get a higher likelihood which allows the distribution to "collapse" towards where the robot actually is.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[(Left) Teach Kids Robotics](https://www.teachkidsrobotics.com/how-do-robots-know-where-they-are/) | [(Right) Udacity](https://www.udacity.com/blog/2019/07/particle-filtering-part-1-beyond-groping-in-the-dark-for-robots.html)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Path Planning
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<split even>
+<img src="Presentations/Robot Operating Systems/Attachments/Path Planning.png" alt="" style="width: 500px; object-fit: fill">
+
+<img src="Presentations/Robot Operating Systems/Attachments/RRT Star.gif" alt="" style="width: 500px; object-fit: fill">
+
+</split>
+
+
+
+notes: After building a map and figuring out where you are, you probably want to get towards a goal location. There are various path planning techniques that can find a path. Some have guarantees for finding the most optimal path in terms of distance or other metrics, but may take longer to run than techniques involving randomness. 
+
+The figure on the left shows a potential field where warmer colors indicate more dangerous areas and cooler colors indicate safer areas. Path A might be shorter, but not as safe as path B.
+
+The figure on the right shows the rapidly exploring random tree (RRT*) algorithm which, as the name implies, uses randomness to explore the map and with enough iterations converges towards the most optimal path.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[(Left) Reality Bytes](https://realitybytes.blog/2017/07/11/graph-based-path-planning-dijkstras-algorithm/) | [(Right) Akshay Kumar](http://www.kumarakshay.me/motion-planning/)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Computer Vision
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/Computer Vision.gif" alt="" style="width: 750px; object-fit: fill">
+
+
+
+
+notes: Maps and paths are great, but maybe you want to react differently to different types of obstacles. This is where object detection and classification through computer vision techniques comes in handy. Convolutional Neural Networks, a type of machine learning algorithm, are used extensively to help autonomous vehicles detect other vehicles on the road, pedestrians, trees, speed limit signs, traffic lights, etc. You can use this information to better plan routes if you know that, for example, a tree is not going to move over time, but a pedestrian might.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[Udacity](https://medium.com/udacity/perception-projects-from-the-self-driving-car-nanodegree-program-51fb88a38ff9)
+</div>
+
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+### Acting
+
+notes: Finally, let's talk about acting. You've come up with a path you would like to follow to get to your goal based on sensor readings from the environment, but how do you actually move yourself where you want to go?
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Motion Planning
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/Highway Trajectory Planning.gif" alt="" style="object-fit: scale-down">
+
+
+
+
+notes: Path planning is like what Google Maps gives you. You know the general route, but you as the driver need to control the vehicle. Motion planning involves planning paths around dynamic obstacles in your local environment. The figure shown here illustrates how an autonomous vehicle might need to switch lanes and plan around the motion of other vehicles to get towards its goal. It needs to take into account the constraints of the vehicle itself since the car cannot just teleport to wherever it wants to go. It can only control its speed and steering angle, so the types of paths it can follow (shown by the white splines in the figure) are limited.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[MathWorks](https://www.mathworks.com/help/nav/ug/highway-trajectory-planning-using-frenet.html)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Controls
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+notes: TODO - talk about real-world examples, motor controls, etc.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Machine Learning
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+notes: TODO - reinforcement learning like AWS racer, etc.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+### ROS - Robot Operating System 
+
+
+
+notes: Now that you hopefully have some understanding of what is involved in robotics, we can talk a bit about how you actually implement the algorithms we just went over.
+
+As I mentioned at the start of this presentation, robotics is a combination of hardware and software. It involves mechanical, electrical, and computer hardware being controlled by software.
+
+The Robot Operating System (ROS) is a free and open source project built on top of Ubuntu that provides a set of software libraries and tools to make building advanced robots easier.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+[ROS](https://player.vimeo.com/video/639236696?h=740f412ce5&title=0&byline=0&portrait=0)
+</div>
+
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### ROS
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+<img src="Presentations/Robot Operating Systems/Attachments/ROS Overview.png" alt="" style="width: 500px; object-fit: fill">
+
+
+notes: TODO - talk about topics/messages for communicating between services, message recording / playback, visualization / teleoperation tools, etc.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### ROS 1 vs 2
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+notes: TODO - discuss differences between ROS 1 and 2 in terms of overall design
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Live Demo
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+notes: Show live demo of MITRE Fast-RRT* and/or RRRobot - Recycling Robot projects. Or just make a recording and show that.
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 600px; width: 1000px; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 20px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+### Thank You!
+</div>
+
+
+
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 7.5%; height: 85%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+
+
+
+- Website: [sravanbalaji.com](https://sravanbalaji.com)
+- GitHub: [balajsra](https://github.com/balajsra)
+- LinkedIn: [sravan-balaji](https://www.linkedin.com/in/sravan-balaji/)
+</div>
+
+<div class="" style="padding: 0 0px; box-sizing: border-box; position: absolute; left: 0%; top: 95%; height: 5%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+
+</div>
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1000,"height":600,"margin":0.2,"controls":true,"controlsLayout":"edges","progress":true,"slideNumber":true,"overview":true,"center":true,"loop":false,"rtl":false,"shuffle":false,"showNotes":false,"autoSlide":0,"transition":"slide","transitionSpeed":"fast"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
