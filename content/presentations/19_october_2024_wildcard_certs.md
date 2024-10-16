@@ -15,8 +15,8 @@ Presenter: John Place.
 
 Slides: [html](https://unixsage.com/presentation/WildCardCerts.html#slide1)
 
-Meeting Notes: <https://hedge.novalug.org/49-WX7OvQ7qxQnphuIbfZQ?both>
+Meeting Notes: <https://hedge.novalug.org/Hxds0bEcSLSb-fv1zxo-AA#>
 
-Agenda Slides: <https://hedge.novalug.org/p/G2MrXqhy_#/>
+Agenda Slides: <https://hedge.novalug.org/p/A_eJoihhX#/>
 
 Video: Coming Soon
