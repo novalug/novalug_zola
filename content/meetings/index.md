@@ -27,6 +27,7 @@ Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug
 | 16 November 2024  | AI: Real World Software Development and DevOps                   | [.ics](/ics/novalug-nov-24.ics) |
 | 14 December 2024<br>_Note: this is the second Saturday of the month._  | Swap Meet / Installfest / Geek T-shirt Contest | [.ics](/ics/novalug-dec-24.ics) |
 | 18 January 2024   | AI @AWS                                                          | [.ics](/ics/novalug-jan-25.ics) |
+| 15 February 2024  | A Professionals Guide to IPv6                                    | [.ics](/ics/novalug-feb-25.ics) |
 
 # Location {#location}
 

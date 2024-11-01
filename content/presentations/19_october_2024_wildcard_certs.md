@@ -19,4 +19,4 @@ Meeting Notes: <https://hedge.novalug.org/Hxds0bEcSLSb-fv1zxo-AA#>
 
 Agenda Slides: <https://hedge.novalug.org/p/A_eJoihhX#/>
 
-Video: Coming Soon
+Video: https://youtu.be/osblJk84X8k?si=PpgJvHKBAgeoCtLT
