@@ -6,7 +6,7 @@ This presentation is on the practical application of Artificial Intelligence
 to develop software, not be a theorist but by a practitioner.  Learn how AI
 is really used to enhance and improve software development.
 
-Presenter: Bryan Webber, founder of Cobenian.
+Presenter: Bryan Weber, founder of Cobenian.
 
 * When: 16 November 2024, 10am to Noon
 * Where: See our [meetings page](/meetings).
