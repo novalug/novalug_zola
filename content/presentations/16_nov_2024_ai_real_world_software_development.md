@@ -14,8 +14,8 @@ Presenter: Bryan Weber, founder of Cobenian.
 
 Demo: [github](https://github.com/Cobenian/novalug-ai)
 
-Meeting Notes: Not yet available
+Meeting Notes: [hedgedoc](https://hedge.novalug.org/K8a4OWS8RjKonTvKVVK_QA#)
 
-Agenda Slides: Not yet available
+Agenda Slides: [hedgedoc](https://hedge.novalug.org/p/H68qWsOOJ#/)
 
 Video: [NoVaLUG YouTube Channel](https://www.youtube.com/@novalug4474)
