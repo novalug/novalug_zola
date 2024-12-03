@@ -18,4 +18,4 @@ Meeting Notes: [hedgedoc](https://hedge.novalug.org/K8a4OWS8RjKonTvKVVK_QA#)
 
 Agenda Slides: [hedgedoc](https://hedge.novalug.org/p/H68qWsOOJ#/)
 
-Video: [NoVaLUG YouTube Channel](https://www.youtube.com/@novalug4474)
+Video: [YouTube](https://www.youtube.com/watch?v=7kN9Y4SBjtg)
