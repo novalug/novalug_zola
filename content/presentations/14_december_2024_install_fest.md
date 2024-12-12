@@ -1,5 +1,5 @@
 +++
-title = "Installfest / Swap Meet / Geek T-Shirt Contest"
+title = "Geekathon (Installfest/Swap Meet/Geek T-Shirt Contest)"
 date = "2024-12-14"
 +++
 This meeting is intended to be more of a social event than a presentation.
