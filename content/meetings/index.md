@@ -23,9 +23,9 @@ Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug
 
 | Date              | Topic                                                            | iCal                            |
 | ----------------- | ---------------------------------------------------------------- | ------------------------------- |
-| 15 February 2025  | [A Professionals Guide to IPv6](/presentations/15-feb-2025-ipv6/)| [.ics](/ics/novalug-feb-25.ics) |
-| 15 March 2025     | Lightening Talks                                                 | [.ics](/ics/novalug-mar-25.ics) |
-
+| 15 March 2025     | [Geek-a-thon](/presentations/15-march-2025-geekathon/)           | [.ics](/ics/novalug-mar-25.ics) |
+| 19 April 2025     | The Current State of Mobile Linux                                | [.ics](/ics/novalug-apr-25.ics) |
+ 
 # Location {#location}
 
 Our monthly meetings are held at the offices of [Ridgeline International](https://www.ridgelineintl.com/), 
