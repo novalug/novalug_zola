@@ -6,7 +6,7 @@ This meeting is intended to be more of a social event than a presentation.
 
 What is a Geek-a-thon?
 
-* Lightening Talks: come give a quick talk about something interesting
+* Lightning Talks: come give a quick talk about something interesting
 * Geek Meme Contest: send us your memes ahead of time, and we'll see which are the funniest
 * Hack-fest: have some hardware you want to show off or need help with... bring it!
 * Swap meet: bring gear you don't use and trade with others.
