@@ -16,6 +16,8 @@ _Meeting Details:_
 * Where: See our [meetings page](/meetings).
 * iCal: [.ics](/ics/novalug-mar-25.ics)
 
-Meeting Notes: TBD
+Meeting Notes (hedgedoc): <https://hedge.novalug.org/2mMECccdTw62BGp2cIArww#>
 
-Agenda Slides: TBD
+Agenda Slides (hedgedoc): <https://hedge.novalug.org/p/KInSD9iz1#/>
+
+Stream (youtube): <https://links.novalug.org/stream>
