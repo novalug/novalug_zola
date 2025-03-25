@@ -21,6 +21,8 @@ Past presentations from meetings can be found [here](@/presentations/_index.md).
   * [Archives](https://lists.firemountain.net/pipermail/novalug/)
 * [Mastodon / Fediverse](https://fosstodon.org/@novalug)
 * [Discord](https://discord.gg/9Cc9QsdDbJ)
+* [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
+* [XMPP](https://xmpp:novalug@groups.sendero.snikket.chat/?join)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
 
 # Contact Us

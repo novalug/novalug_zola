@@ -36,6 +36,6 @@ menu_items = [
     {name = "Pictures", url = "$BASE_URL/pics"},
     {name = "Link(ed) List", url = "$BASE_URL/linklist"}
 ]
-favicon = "/penguin_novalug.png"
-favicon_mimetype = "image/png"
-default_og_image = "penguin_novalug.png"
+favicon = "/novalug_logo4.jpeg"
+favicon_mimetype = "image/jpeg"
+default_og_image = "novalug_logo2.jpeg"

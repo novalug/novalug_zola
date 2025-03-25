@@ -2,7 +2,7 @@
 title = "About"
 +++
 <p align="center">
-  <img src="/about/penguin.png" />
+  <img src="/novalug_logo2.jpeg" />
 </p>
 
 We are a curious, informal, and friendly mix of IT professionals, hobbyists, students, and 
