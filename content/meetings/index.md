@@ -15,6 +15,9 @@ On this page:
 
 | [Notes](https://links.novalug.org/notes) | [Slides](https://links.novalug.org/slides) | [Stream](https://links.novalug.org/stream) |
 
+_Note: If you are late, please reach out to us over
+[Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)._
+
 # Schedule {#schedule}
 
 Meetings are normally held the third Saturday of the month from 10am to Noon.
@@ -23,8 +26,8 @@ Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug
 
 | Date              | Topic                                                            | iCal                            |
 | ----------------- | ---------------------------------------------------------------- | ------------------------------- |
-| 15 March 2025     | [Geek-a-thon](/presentations/15-march-2025-geekathon/)           | [.ics](/ics/novalug-mar-25.ics) |
-| 19 April 2025     | The Current State of Mobile Linux                                | [.ics](/ics/novalug-apr-25.ics) |
+| 19 April 2025     | [The Current State of Mobile Linux](/presentations/19-april-2025-linux-mobile)| [.ics](/ics/novalug-apr-25.ics) |
+| 17 May 2025       | No Topic Yet (but we are still meeting)                          |                                 |
  
 # Location {#location}
 
@@ -38,6 +41,9 @@ Address:
     Tysons Corner, VA
 
 --> Google [Map](https://maps.app.goo.gl/Khbej6vji4HrPonP7)
+
+_Note: If you are late, please reach out to us over
+[Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)._
 
 # Metro Rail Access {#metro}
 
