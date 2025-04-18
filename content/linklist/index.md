@@ -8,8 +8,8 @@ To have a link placed on this page, please use [this form](https://docs.google.c
   * [Subscribe](https://lists.firemountain.net/mailman/listinfo/novalug)
   * [Archives](https://lists.firemountain.net/pipermail/novalug/)
 * [Mastodon / Fediverse](https://fosstodon.org/@novalug)
-* [Discord](https://discord.gg/9Cc9QsdDbJ)
 * [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
+* [Discord](https://discord.gg/9Cc9QsdDbJ)
 * [XMPP](https://xmpp:novalug@groups.sendero.snikket.chat/?join)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
 

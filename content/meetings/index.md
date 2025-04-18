@@ -26,7 +26,7 @@ Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug
 
 | Date              | Topic                                                            | iCal                            |
 | ----------------- | ---------------------------------------------------------------- | ------------------------------- |
-| 19 April 2025     | [The Current State of Mobile Linux](/presentations/19-april-2025-linux-mobile)| [.ics](/ics/novalug-apr-25.ics) |
+| 19 April 2025     | [The Current State of Mobile Linux](/presentations/19-april-2025-linux-mobile)|[.ics](/ics/novalug-apr-25.ics) |
 | 17 May 2025       | No Topic Yet (but we are still meeting)                          |                                 |
  
 # Location {#location}

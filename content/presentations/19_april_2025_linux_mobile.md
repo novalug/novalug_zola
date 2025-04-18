@@ -18,6 +18,6 @@ _Meeting Details:_
 
 Slides: Not Yet Available
 
-Meeting Notes: Not Yet Available
+Meeting Notes: https://hedge.novalug.org/wEHblPovQoSdbaGCouLg8Q
 
-Agenda Slides: Not Yet Available
+Agenda Slides: https://hedge.novalug.org/p/TsSWxz_wO#/
