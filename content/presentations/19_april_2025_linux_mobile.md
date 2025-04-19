@@ -16,8 +16,8 @@ _Meeting Details:_
 * Where: See our [meetings page](/meetings).
 * iCal: [.ics](/ics/novalug-apr-25.ics)
 
-Slides: Not Yet Available
+Slides: [ODP Slides](/presentation_materials/19_april_2025-mobile-linux/mobile-linux.odp)
 
-Meeting Notes: https://hedge.novalug.org/wEHblPovQoSdbaGCouLg8Q
+Meeting Notes: [Hedgedoc](https://hedge.novalug.org/wEHblPovQoSdbaGCouLg8Q)
 
-Agenda Slides: https://hedge.novalug.org/p/TsSWxz_wO#/
+Agenda Slides: [Hedgedoc](https://hedge.novalug.org/p/TsSWxz_wO#/)

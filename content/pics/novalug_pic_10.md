@@ -1,6 +1,6 @@
 +++
 title = "Geekathon"
-date = "2022-12-14"
+date = "2024-12-14"
 +++
 
 Our December 2024 meeting was a social event. We held an install-fest, geek t-shirt contest,

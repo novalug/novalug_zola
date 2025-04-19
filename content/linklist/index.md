@@ -1,5 +1,6 @@
 +++
 title = "Link(ed) List"
+# ics maker at https://ical.marudot.com/
 +++
 To have a link placed on this page, please use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdyC8ANvEhW3L6L9r5Xk_5mXJekfhsIKWGHJr29qty31nihqQ/viewform?usp=sf_link).
 
@@ -12,6 +13,7 @@ To have a link placed on this page, please use [this form](https://docs.google.c
 * [Discord](https://discord.gg/9Cc9QsdDbJ)
 * [XMPP](https://xmpp:novalug@groups.sendero.snikket.chat/?join)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
+* [WebCal](/ics/novalug_calendar.ics)
 
 # NoVaLUG Participants
   * [Dave Fuller, IT Consulting for Small Business](http://www.raven-linux.tech/)

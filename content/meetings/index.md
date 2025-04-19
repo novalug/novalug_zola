@@ -21,13 +21,18 @@ _Note: If you are late, please reach out to us over
 # Schedule {#schedule}
 
 Meetings are normally held the third Saturday of the month from 10am to Noon.
-Please check our [mailing list](https://lists.firemountain.net/pipermail/novalug/) or
-[Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule changes.
+Please check our
+[Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H),
+or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule changes.
 
-| Date              | Topic                                                            | iCal                            |
-| ----------------- | ---------------------------------------------------------------- | ------------------------------- |
-| 19 April 2025     | [The Current State of Mobile Linux](/presentations/19-april-2025-linux-mobile)|[.ics](/ics/novalug-apr-25.ics) |
-| 17 May 2025       | No Topic Yet (but we are still meeting)                          |                                 |
+| Date              | Topic                                                            |
+| ----------------- | ---------------------------------------------------------------- |
+| 17 May 2025       | Open DNS Resolvers                                               |
+| 21 June 2025      | To Be Announced                                                  |
+| 19 July 2025      | To Be Announced                                                  |
+| 16 August 2025    | Run Your Own Email Server                                        |
+
+Subscribe to our [WebCal](/ics/novalug_calendar.ics).
  
 # Location {#location}
 
