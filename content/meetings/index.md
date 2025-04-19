@@ -32,7 +32,7 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 | 19 July 2025      | To Be Announced                                                  |
 | 16 August 2025    | Run Your Own Email Server                                        |
 
-Subscribe to our [WebCal](/ics/novalug_calendar.ics).
+Subscribe to our [WebCal](webcal://novalug.org/ics/novalug_calendar.ics).
  
 # Location {#location}
 
