@@ -14,6 +14,6 @@ _Meeting Details:_
 * When: 17 May 2025, 10am to Noon
 * Where: See our [meetings page](/meetings).
 
-Meeting Notes: Not Yet Available
+Meeting Notes: https://hedge.novalug.org/RSf3_d-tSUqnNIFzD7KZyw?edit
 
-Agenda Slides: Not Yet Available
+Agenda Slides: https://hedge.novalug.org/p/bvkE7ddAi#/
