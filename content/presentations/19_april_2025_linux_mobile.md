@@ -5,7 +5,7 @@ date = "2025-04-19"
 og_image = "/presentation_materials/linux_phone.jpg"
 +++
 
-{{ image(src="presentation_materials/linux_phone.jpg") }}
+{{ resize_image(path="presentation_materials/linux_phone.jpg") }}
 
 Presenter: Matt Panhans
 

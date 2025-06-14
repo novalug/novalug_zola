@@ -5,7 +5,7 @@ date = "2025-05-17"
 og_image = "/novalug_logo7.jpeg"
 +++
 
-{{ image(src="novalug_logo7.jpeg") }}
+{{ resize_image(path="/novalug_logo7.jpeg") }}
 
 Join us for break-out Hacking Sessions. After introductions, we'll break into groups
 for hacking on whatever people desire (as long as it isn't illegal, of course).

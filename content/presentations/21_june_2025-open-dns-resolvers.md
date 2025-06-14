@@ -5,7 +5,7 @@ date = "2025-06-21"
 og_image = "/presentation_materials/linux_dns.jpg"
 +++
 
-{{ image(src="presentation_materials/linux_dns.jpg") }}
+{{ resize_image(path="/static/presentation_materials/linux_dns.jpg", alt="Linux and DNS") }}
 
 Darren Kara, Principal Engineer @ Quad9, will discuss open DNS resolvers
 and how they can help with your privacy and security.

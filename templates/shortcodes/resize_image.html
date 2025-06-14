@@ -1,0 +1,8 @@
+{% set img_path = path %}
+{% set width = width | default(value=400) %} {# Default width if not provided #}
+{% set op = op | default(value="fit_width") %} {# Default operation #}
+
+{% set resized = resize_image(path=img_path, width=width, op=op) %}
+<center>
+<img src="{{ resized.url }}" alt="{{ alt | default(value="") }}">
+</center>
