@@ -27,8 +27,7 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 
 | Date              | Topic                                                            |
 | ----------------- | ---------------------------------------------------------------- |
-| 21 June 2025      | [Open DNS Resolvers](/presentations/21-june-2025-open-dns-resolvers)|
-| 19 July 2025      | Hardening Linux Lightning Talks                                  |
+| 19 July 2025      | [Hardening Linux Lightning Talks](/presentations/19-july-2025-lightning-talks)|
 | 16 August 2025    | Run Your Own Email Server                                        |
 | 20 September 2025 | NoVaLUG and the Fediverse                                        |
 
