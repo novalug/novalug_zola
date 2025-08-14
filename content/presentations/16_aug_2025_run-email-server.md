@@ -23,6 +23,6 @@ _Meeting Details:_
 
 Slides: [ODP Slides](/presentation_materials/16_aug_2025-run-email-server/MIAB.odp)
 
-Meeting Notes: [HedgeDoc](https://hedge.novalug.org/cCCUWPdZTNSQS6byVOh5tw)
+Meeting Notes: [HedgeDoc](https://hedge.novalug.org/xxCyAlbDSauJK7LbLybKbA)
 
-Agenda Slides: [HedgeDoc](https://hedge.novalug.org/p/UuV97dTpg#/12)
+Agenda Slides: [HedgeDoc](https://hedge.novalug.org/p/wkjjtZn45#/6)
