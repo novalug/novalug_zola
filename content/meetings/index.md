@@ -27,8 +27,7 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 
 | Date              | Topic                                                            |
 | ----------------- | ---------------------------------------------------------------- |
-| 19 July 2025      | [Hardening Linux Lightning Talks](/presentations/19-july-2025-lightning-talks)|
-| 16 August 2025    | Run Your Own Email Server                                        |
+| 16 August 2025    | [Run Your Own Email Server](/presentations/16-aug-2025-run-email-server)|
 | 20 September 2025 | NoVaLUG and the Fediverse                                        |
 
 Subscribe to our [WebCal](webcal://novalug.org/ics/novalug_calendar.ics).
