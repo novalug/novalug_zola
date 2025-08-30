@@ -2,14 +2,7 @@
 title = "Meetings"
 # ics maker at https://ical.marudot.com/
 +++
-NoVaLUG holds monthly, in-person meetings.
-
-On this page:
-* [In-Meeting Quick Links](#quick_links)
-* [Schedule](#schedule)
-* [Location](#location)
-* [Metro Rail Access](#metro)
-* [Parking Instructions](#parking)
+NoVaLUG holds monthly, in-person meetings with or without a keynote presentation.
 
 # In-Meeting Quick Links {#quick_links}
 
@@ -25,46 +18,11 @@ Please check our
 [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H),
 or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule changes.
 
-| Date              | Topic                                                            |
-| ----------------- | ---------------------------------------------------------------- |
-| 16 August 2025    | [Run Your Own Email Server](/presentations/16-aug-2025-run-email-server)|
-| 20 September 2025 | NoVaLUG and the Fediverse                                        |
+| Date              | Topic                                                            | Location |
+| ----------------- | ---------------------------------------------------------------- | -------- |
+| 20 September 2025 | The Fediverse... And NovaLug                                     | [Arlington Central Library](/meetings/location-acl-bluemont)|
+| 18 October 2025   | Gaming on Linux                                                  | [Solutions Street](/meetings/location-solutions-street) |
+| 15 Nobever 2025   | _TBD_                                                            | [Solutions Street](/meetings/location-solutions-street) |
 
 Subscribe to our [WebCal](webcal://novalug.org/ics/novalug_calendar.ics).
  
-# Location {#location}
-
-Our monthly meetings are held at the offices of [Ridgeline International](https://www.ridgelineintl.com/), 
-which is an 8-minute walk from the Greensboro Metro Station. There is also plenty of parking.
-
-Address:
-
-    Edwin Building
-    8255 Greensboro Dr, Suite 500
-    Tysons Corner, VA
-
---> Google [Map](https://maps.app.goo.gl/Khbej6vji4HrPonP7)
-
-_Note: If you are late, please reach out to us over
-[Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)._
-
-# Metro Rail Access {#metro}
-
-The following map shows the **8-minute walk** from the _Greensboro Metro Station_.
-
-![](metro_to_ridgeline.png)
-
-# Parking {#parking}
-
-Parking is available in the parking deck behind the Edwin Building. The deck
-is labeled "Public Parking: 8251 & 8255 Greensboro".
-
-DO NOT USE THE BOOZE-ALLEN-HAMILTON PARKING DECK.
-
-![](parking_at_ridgeline.png)
-
-This is a controlled parking deck, and **validated "chaser" tickets will
-be available at the meeting** so participants will not be charged for parking.
-
-![](edwin_parking.jpeg)
-
