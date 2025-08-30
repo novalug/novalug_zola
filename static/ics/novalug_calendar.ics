@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//ical.marudot.com//iCal Event Maker
 X-WR-CALNAME:NoVaLUG Meetings
 NAME:NoVaLUG Meetings
-REFRESH-INTERVAL;VALUE=DURATION:P1W
+REFRESH-INTERVAL;VALUE=DURATION:P1H
 CALSCALE:GREGORIAN
 BEGIN:VTIMEZONE
 TZID:America/New_York
@@ -26,14 +26,24 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20250419T224703Z
-UID:1745102695195-37367@ical.marudot.com
-DTSTART;TZID=America/New_York:20250419T100000
+DTSTAMP:20250830T214504Z
+UID:1756590062356-71603@ical.marudot.com
+DTSTART;TZID=America/New_York:20250920T100000
+DTEND;TZID=America/New_York:20250920T120000
+SUMMARY:The Fediverse... and NoVaLUG
+URL:https://novalug.org/meetings/location-acl-bluemont/
+DESCRIPTION:Monthly Meeting of NoVaLUG.
+LOCATION:Arlington Central Library\, 1015 N Quincy St\, Arlington\, VA 22201
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20250830T214504Z
+UID:1756590136179-84895@ical.marudot.com
+DTSTART;TZID=America/New_York:20251018T100000
 RRULE:FREQ=MONTHLY;BYDAY=3SA
-DTEND;TZID=America/New_York:20250419T120000
-SUMMARY:NoVaLUG Meeting
-URL:https://novalug.org/meetings/
-DESCRIPTION:Monthly In-Person Meeting of the Northern Virginia Linux Users Group\n\n
-LOCATION:8255 Greensboro Dr\, Suite 500 Tysons Corner\, VA
+DTEND;TZID=America/New_York:20251018T120000
+SUMMARY:Montly Meeting of NoVaLUG
+URL:https://novalug.org/meetings/location-solutions-street/
+DESCRIPTION:Monthly\, in-person meeting of NoVaLUG.
+LOCATION:Solutions Street\, 505 Huntmar Park Drive Suite 325 (Floor 3) Herndon\, Virginia 20170
 END:VEVENT
 END:VCALENDAR
