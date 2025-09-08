@@ -20,7 +20,7 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 
 | Date              | Topic                                                            | Location |
 | ----------------- | ---------------------------------------------------------------- | -------- |
-| 20 September 2025 | The Fediverse... And NovaLug                                     | [Arlington Central Library](/meetings/location-acl-bluemont)|
+| 20 September 2025 | [The Fediverse... And NovaLug](/presentations/20-september-2025) | [Arlington Central Library](/meetings/location-acl-bluemont)|
 | 18 October 2025   | Gaming on Linux                                                  | [Solutions Street](/meetings/location-solutions-street) |
 | 15 Nobever 2025   | _TBD_                                                            | [Solutions Street](/meetings/location-solutions-street) |
 
