@@ -22,7 +22,7 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 | ----------------- | ---------------------------------------------------------------- | -------- |
 | 20 September 2025 | [The Fediverse... And NovaLug](/presentations/20-september-2025) | [Arlington Central Library](/meetings/location-acl-bluemont)|
 | 18 October 2025   | Gaming on Linux                                                  | [Solutions Street](/meetings/location-solutions-street) |
-| 15 Nobever 2025   | _TBD_                                                            | [Solutions Street](/meetings/location-solutions-street) |
+| 15 November 2025  | Making CLIs with Java and the GraalVM                            | [Solutions Street](/meetings/location-solutions-street) |
 
 Subscribe to our [WebCal](webcal://novalug.org/ics/novalug_calendar.ics).
  
