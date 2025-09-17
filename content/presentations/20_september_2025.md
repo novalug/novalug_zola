@@ -16,7 +16,7 @@ discuss NoVaLUG's own foothold in this social network, <https://akk.novalug.org>
 
 _Meeting Details:_
 * When: 20 September 2025, 10am to Noon
-  * Streaming starts at 10:30am
+  * This meeting will not be streamed.
 * Where: [Bluemont Room, Arlington Central Library](/meetings/location-acl-bluemont).
 
 Slides: TBD
