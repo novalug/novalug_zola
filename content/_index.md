@@ -25,16 +25,17 @@ Past presentations from meetings can be found [here](@/presentations/_index.md).
 * [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
 
-# Contact Us
-
-If you would like contact to NoVaLUG, 
-please use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdyC8ANvEhW3L6L9r5Xk_5mXJekfhsIKWGHJr29qty31nihqQ/viewform?usp=sf_link).
-
 # General Announcements
 
 Our publicly visible announcements can be viewed on our
 [Fediverse (aka mastodon)](https://akk.novalug.org/novalug) account without the need to log in to any services.
 
 Announcements are also sent to mailing list, Signal, and LinkedIn (see above).
+
+# Contact Us
+
+If you would like contact to NoVaLUG, 
+please join the mailing list, use Signal, or DM us over the Fediverse.
+
 
 

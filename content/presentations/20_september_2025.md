@@ -19,8 +19,8 @@ _Meeting Details:_
   * This meeting will not be streamed.
 * Where: [Bluemont Room, Arlington Central Library](/meetings/location-acl-bluemont).
 
-Slides: TBD
+Slides: <https://hedge.novalug.org/p/_SxoDvLSS#/>
 
-Meeting Notes: TBD
+Meeting Notes: <https://hedge.novalug.org/xxCyAlbDSauJK7LbLybKbA?both>
 
-Agenda Slides: TBD
+Agenda Slides: <https://hedge.novalug.org/p/wkjjtZn45#/>
