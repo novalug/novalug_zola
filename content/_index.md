@@ -19,7 +19,9 @@ Past presentations from meetings can be found [here](@/presentations/_index.md).
 * Mailing List
   * [Subscribe](https://lists.firemountain.net/mailman/listinfo/novalug)
   * [Archives](https://lists.firemountain.net/pipermail/novalug/)
-* [Fediverse (mastodon)](https://akk.novalug.org/novalug)
+* Fediverse (aka mastodon)
+  * [@novalug@novalug.org](https://akk.novalug.org/novalug)
+  * [Invite Link](https://akk.novalug.org/registration/TYQ191BZpP1-4YUlJpQfLRGorHYqpAkR9vJWePJ9h7g=)
 * [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
 
@@ -31,7 +33,7 @@ please use [this form](https://docs.google.com/forms/d/e/1FAIpQLSdyC8ANvEhW3L6L9
 # General Announcements
 
 Our publicly visible announcements can be viewed on our
-[Fediverse (aka mastodon)](https://akk.novalug.org/novalug) without the need to log in to any services.
+[Fediverse (aka mastodon)](https://akk.novalug.org/novalug) account without the need to log in to any services.
 
 Announcements are also sent to mailing list, Signal, and LinkedIn (see above).
 
