@@ -1,10 +1,10 @@
 +++
-title = "Solutions Street Meeting Location"
+title = "Solution Street Meeting Location"
 +++
  
-# Meeting Location - Solutions Street {#location}
+# Meeting Location - Solution Street {#location}
 
-This meeting location is at [Solutions Street](https://solutionstreet.com/). 
+This meeting location is at [Solution Street](https://solutionstreet.com/). 
 
 ![](/meetings/solutions_street_505_huntmar_back.jpg)
 
