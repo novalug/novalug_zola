@@ -8,12 +8,14 @@ To have a link placed on this page, please use [this form](https://docs.google.c
 * Mailing List
   * [Subscribe](https://lists.firemountain.net/mailman/listinfo/novalug)
   * [Archives](https://lists.firemountain.net/pipermail/novalug/)
-* [Mastodon / Fediverse](https://fosstodon.org/@novalug)
+* Fediverse (aka mastodon)
+  * [@novalug@novalug.org](https://akk.novalug.org/novalug)
+  * [Invite Link](https://akk.novalug.org/registration/TYQ191BZpP1-4YUlJpQfLRGorHYqpAkR9vJWePJ9h7g=)
 * [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
-* [Discord](https://discord.gg/9Cc9QsdDbJ)
-* [XMPP](https://xmpp:novalug@groups.sendero.snikket.chat/?join)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
-* [WebCal](webcal://novalug.org/ics/novalug_calendar.ics)
+* Calendaring
+  * [novalug@Mobilizon.us](https://mobilizon.us/@novalug)
+  * Subscribe to the calendar feed: [webcal](webcal://mobilizon.us/@novalug/feed/ics)
 
 # NoVaLUG Participants
   * [Dave Fuller, IT Consulting for Small Business](http://www.raven-linux.tech/)

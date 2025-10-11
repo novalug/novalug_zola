@@ -24,6 +24,9 @@ Past presentations from meetings can be found [here](@/presentations/_index.md).
   * [Invite Link](https://akk.novalug.org/registration/TYQ191BZpP1-4YUlJpQfLRGorHYqpAkR9vJWePJ9h7g=)
 * [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
 * [LinkedIn](https://www.linkedin.com/groups/13065244/)
+* Calendaring
+  * [novalug@Mobilizon.us](https://mobilizon.us/@novalug)
+  * Subscribe to the calendar feed: [webcal](webcal://mobilizon.us/@novalug/feed/ics)
 
 # General Announcements
 
