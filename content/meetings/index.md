@@ -20,7 +20,7 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 
 | Date              | Topic                                                            | Location |
 | ----------------- | ---------------------------------------------------------------- | -------- |
-| 18 October 2025   | Gaming on Linux                                                  | [Solution Street](/meetings/location-solutions-street) |
+| 18 October 2025   | [Gaming on Linux](/presentations/2025-october-18/)               | [Solution Street](/meetings/location-solutions-street) |
 | 15 November 2025  | Making CLIs with Java and the GraalVM                            | [Solution Street](/meetings/location-solutions-street) |
 | 13 December 2025 (Note, 2nd Saturday)  | TBD                                         | [Solution Street](/meetings/location-solutions-street) |
 
