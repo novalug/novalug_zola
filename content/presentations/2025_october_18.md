@@ -17,7 +17,7 @@ _Meeting Details:_
 * When: 18 October 2025, 10am to Noon
 * Where: [Solution Street, Herndon VA](/meetings/location-solutions-street).
 
-Slides: Not Yet Available
+Slides: [PDF](/presentation_materials/2025_oct_18/linux_gaming_202510.pdf)
 
 Meeting Notes: <https://hedge.novalug.org/qEkRvDcwTDCAWA8bHjC2fw>
 
