@@ -26,3 +26,4 @@ a few days before the meeting, and we will arrange to pick you up at the Hunting
 
 There is plenty of parking on the other side of Wheeler Ave.
 
+**BEWARE** There are some parking lots nearby that are not available for Port City patrons. Please read signs closely.
