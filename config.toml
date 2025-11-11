@@ -32,7 +32,7 @@ menu_items = [
     {name = "About", url = "$BASE_URL/about"},
     {name = "Meetings", url = "$BASE_URL/meetings"},
     {name = "Presentations", url = "$BASE_URL/presentations"},
-    {name = "Area Events", url = "$BASE_URL/events"},
+    {name = "Jobs Board", url = "https://links.novalug.org/jobs"},
     {name = "Pictures", url = "$BASE_URL/pics"},
     {name = "Link(ed) List", url = "$BASE_URL/linklist"}
 ]

@@ -1,2 +1,3 @@
 # For Akkoma webfinger
 /.well-known/host-meta    https://akk.novalug.org/.well-known/host-meta   302
+/ics/novalug_calendar.ics https://mobilizon.us/@novalug/feed/ics         302
