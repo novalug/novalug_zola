@@ -20,9 +20,9 @@ or  [Mastodon](https://fosstodon.org/@novalug) in case of unexpected schedule ch
 
 | Date              | Topic                                                            | Location |
 | ----------------- | ---------------------------------------------------------------- | -------- |
-| 18 October 2025   | [Gaming on Linux](/presentations/2025-october-18/)               | [Solution Street](/meetings/location-solutions-street) |
-| 15 November 2025  | Making CLIs with Java and the GraalVM                            | [Solution Street](/meetings/location-solutions-street) |
-| 13 December 2025 (Note, 2nd Saturday)  | TBD                                         | [Solution Street](/meetings/location-solutions-street) |
+| 15 November 2025  | [Making CLIs with Java and the GraalVM](/presentations/2025-november-15) | [Solution Street](/meetings/location-solutions-street) |
+| 13 December 2025  | [Holiday Happy Hour](/presentations/2025-december-13)            | [Port City Brewing](/meetings/location-port-city-alexandria) |
+| 20 December 2025  | [Geek-a-thon](/presentations/2025-december-20)                   | [Solution Street](/meetings/location-solutions-street) |
 
 We calendar our events on Mobilizon:
 * [novalug@Mobilizon.us](https://mobilizon.us/@novalug)
