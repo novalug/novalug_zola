@@ -34,7 +34,7 @@ menu_items = [
     {name = "Presentations", url = "$BASE_URL/presentations"},
     {name = "Jobs Board", url = "https://links.novalug.org/jobs"},
     {name = "Pictures", url = "$BASE_URL/pics"},
-    {name = "Link(ed) List", url = "$BASE_URL/linklist"}
+    {name = "List of Lists", url = "https://links.novalug.org/lists"}
 ]
 favicon = "/novalug_logo4.jpeg"
 favicon_mimetype = "image/jpeg"

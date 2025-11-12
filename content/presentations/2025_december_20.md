@@ -11,9 +11,10 @@ This meeting is intended to be more of a social event than a presentation.
 
 What is a Geek-a-thon?
 
-* Lightning Talks: come give a quick talk about something interesting
 * Geek Meme Contest: send us your memes ahead of time, and we'll see which are the funniest
+* Lightning Talks: come give a quick talk about something interesting
 * Hack-fest: have some hardware you want to show off or need help with... bring it!
+* Gear-swap: bring gear you want to swap with others or just give away. To bring gear into the office, it must be 30lbs or lighter and fit through a person-sized door. Exchanges of larger gear can be accommodated in the parking lot.
 
 _Meeting Details:_
 * When: 20 December 2025, 10am to Noon
