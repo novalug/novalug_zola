@@ -6,7 +6,7 @@ NoVaLUG holds monthly, in-person meetings with or without a keynote presentation
 
 # In-Meeting Quick Links {#quick_links}
 
-| [Notes](https://links.novalug.org/notes) | [Slides](https://links.novalug.org/slides) | [Stream](https://links.novalug.org/stream) |
+| [Notes](https://links.novalug.org/notes) | [Stream](https://links.novalug.org/stream) |
 
 _Note: If you are late, please reach out to us over
 [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)._

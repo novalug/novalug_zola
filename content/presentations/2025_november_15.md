@@ -21,8 +21,8 @@ _Meeting Details:_
 
 Slides: Not Yet Available
 
-Meeting Notes: Not Yet Available
+Meeting Notes: [Hedgedoc](https://hedge.novalug.org/4LaLy78HShCyS3cFDeOxwQ)
 
-Agenda Slides: Not Yet Available
+Agenda Slides: [Hedgedoc Preso](https://hedge.novalug.org/p/6cuX3xM_v#/18)
 
 Stream (youtube): <https://links.novalug.org/stream>
