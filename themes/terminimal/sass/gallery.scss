@@ -1,0 +1,39 @@
+/* Styling for the Tiled Image Gallery */
+.image-gallery {
+  /* 1. Enable CSS Grid */
+  display: grid;
+
+  /* 2. Create the Responsive Columns */
+  /* This is the key: it creates columns that are at least 300px wide. 
+       If there's room, it'll create up to 3 columns.
+       The 1fr ensures they take up equal space.
+    */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* 3. Spacing */
+  gap: 15px;
+  /* Space between tiles */
+  margin: 20px 0;
+  /* Space above/below the gallery */
+}
+
+.gallery-item {
+  /* Ensures the tile takes up the full grid cell */
+  overflow: hidden;
+  border-radius: 4px;
+  /* Optional: adds nice rounded corners */
+}
+
+.gallery-item img {
+  /* Essential: make the image fill its container */
+  width: 100%;
+  /* Optional: crops the image to fill the space without stretching */
+  height: 100%;
+  object-fit: cover;
+  /* Optional: subtle hover effect */
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}

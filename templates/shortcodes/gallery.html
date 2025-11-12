@@ -1,0 +1,32 @@
+{# templates/shortcodes/gallery.html - CORRECTED #}
+
+{# This shortcode expects a "paths" array of image file names. #}
+<div class="image-gallery">
+  {% set image_paths = paths | default(value=[]) %}
+  {% set base_static_path = "/content/pics/" %}
+
+  {% for path in image_paths %}
+
+  {# Construct the path Zola needs to locate the original image #}
+  {% set full_path = base_static_path ~ path %}
+
+  {#
+  Attempt to resize the image. If the path is invalid, Zola will
+  fall back to just outputting the original path string.
+  #}
+  {% set resized_image = resize_image(
+  path=full_path,
+  width=400,
+  op="fit_width",
+  format="webp"
+  ) %}
+
+  {# Set the source URL to the resized image's URL (or original if resizing failed/was skipped) #}
+  {% set image_url = resized_image.url %}
+
+  <div class="gallery-item">
+    {# The link still points to the original, full-resolution image #}
+    <img src="{{ image_url }}" alt="Gallery image {{ loop.index }}" loading="lazy">
+  </div>
+  {% endfor %}
+</div>

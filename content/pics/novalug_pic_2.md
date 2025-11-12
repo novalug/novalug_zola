@@ -2,12 +2,15 @@
 title = "Science Experiments with Weather Balloons & Raspberry Pi"
 date = "2020-10-10"
 +++
+{{ gallery(paths=["intro.png", "overview.png", "details.worrier.png", "attendees..png", "sheep.png", "john.a.png", "john.a.2.png", "bottle.png", "hot.air.png", "high.up.png", "parachute.penguin.png"]) }}
 
-![](/pics/composit.1024x768.png)
+<!-- more -->
 
 This virtual presentation was by Dr. Heather Lomond and John Alexander of the Shropshire LUG. Heather was on her Shropshire farm while John was in Telford.
 
-<!-- more -->
+![](/pics/composit.1024x768.png)
+
+
 
 Introduction
 ![](/pics/intro.png)
