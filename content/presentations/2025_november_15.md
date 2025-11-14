@@ -19,7 +19,7 @@ _Meeting Details:_
 * When: 15 November 2025, 10am to Noon
 * Where: [Solution Street, Herndon VA](/meetings/location-solutions-street).
 
-Slides: Not Yet Available
+Slides: [PDF](/presentation_materials/2025_nov_15/graalvm.pdf)
 
 Meeting Notes: [Hedgedoc](https://hedge.novalug.org/4LaLy78HShCyS3cFDeOxwQ)
 
