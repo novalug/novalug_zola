@@ -1,8 +1,9 @@
 +++
 title = "Meetings"
 template = "section.html"
-# ics maker at https://ical.marudot.com/
 +++
+{{ resize_image(path="/meetings_logo.png") }}
+
 NoVaLUG holds monthly, in-person meetings with or without a keynote presentation.
 Meetings are normally held the third Saturday of the month from 10am to Noon.
 Please check our
@@ -18,10 +19,10 @@ Meetings:
 
 The following events are from the [NoVaLUG Mobilizon RSS feed](https://mobilizon.us/@novalug/feed/atom).
 
-<div id="content"></div>
+<div id="feed"></div>
 
 <script type="text/javascript">
-    var content = document.getElementById('content');
+    var content = document.getElementById('feed');
 
     var xhr = new XMLHttpRequest();
 
@@ -31,55 +32,46 @@ The following events are from the [NoVaLUG Mobilizon RSS feed](https://mobilizon
             var data = JSON.parse(xhr.responseText);
             var itemsContainer = document.createElement('DIV');
 
-            if(data.status == 'ok'){
+            for( var i=0,t = data.items.length ; i < t ; ++i ){
+                var item = data.items[i];
+                var itemContainer = document.createElement('DIV');
+
+                var itemTitleElement = document.createElement('H1');
+                var itemLinkElement = document.createElement('A');
+                var itemDescriptionElement = document.createElement('P');
 
 
-                for( var i=0,t = data.items.length ; i < t ; ++i ){
-                    var item = data.items[i];
-                    var itemContainer = document.createElement('DIV');
+                itemLinkElement.setAttribute('href' , item.id);
+                itemLinkElement.innerText = item.title;
+                itemTitleElement.classList.add("post-title");
+                itemTitleElement.appendChild(itemLinkElement);
 
-                    var itemTitleElement = document.createElement('H1');
-                    var itemLinkElement = document.createElement('A');
-                    var itemDescriptionElement = document.createElement('P');
+                itemDescriptionElement.innerHTML = item.content_html;
 
+                itemContainer.appendChild(itemTitleElement);
 
-                    itemLinkElement.setAttribute('href' , item.link);
-                    itemLinkElement.innerText = item.title;
-                    itemTitleElement.classList.add("post-title");
-                    itemTitleElement.appendChild(itemLinkElement);
-
-                    // note : make sure the content is XSS safe before using innerHTML
-                    itemDescriptionElement.innerHTML = item.description;
-
-                    itemContainer.appendChild(itemTitleElement);
-
-                    var imageSrc = item["enclosure"]["link"];
-                    if (imageSrc != null ) {
-                        var image = document.createElement("IMG");
-                        image.src = imageSrc;
-                        image.width = 400;
-                        var imageContainer = document.createElement("CENTER");
-                        imageContainer.appendChild(image);
-                        itemContainer.appendChild(imageContainer);
-                    }
-
-                    itemContainer.appendChild(itemDescriptionElement);
-
-                    itemsContainer.appendChild(itemContainer);
-
+                var imageSrc = item["image"];
+                if (imageSrc != null ) {
+                    var image = document.createElement("IMG");
+                    image.src = imageSrc;
+                    image.width = 400;
+                    var imageContainer = document.createElement("CENTER");
+                    imageContainer.appendChild(image);
+                    itemContainer.appendChild(imageContainer);
                 }
 
+                itemContainer.appendChild(itemDescriptionElement);
 
-
-                content.appendChild(itemsContainer);
-
+                itemsContainer.appendChild(itemContainer);
 
             }
+
+            content.appendChild(itemsContainer);
         }
     };
     xhr.open(
         'GET',
-        'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmobilizon.us%2F%40novalug%2Ffeed%2Fatom',
+        'https://akk.novalug.org/static/novalug-meeting-feed.json',
         true
     );
     xhr.send();
