@@ -29,11 +29,10 @@ menu_items = [
     # each of these is optional, name and url are required
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "Home", url = "$BASE_URL"},
-    {name = "About", url = "$BASE_URL/about"},
     {name = "Meetings", url = "$BASE_URL/meetings"},
-    {name = "Presentations", url = "$BASE_URL/presentations"},
-    {name = "Jobs Board", url = "https://links.novalug.org/jobs"},
+    {name = "Tech News", url = "$BASE_URL/news"},
     {name = "Pictures", url = "$BASE_URL/pics"},
+    {name = "Jobs Board", url = "https://links.novalug.org/jobs"},
     {name = "List of Lists", url = "https://links.novalug.org/lists"}
 ]
 favicon = "/novalug_logo4.jpeg"

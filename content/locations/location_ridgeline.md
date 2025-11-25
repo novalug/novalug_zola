@@ -22,7 +22,7 @@ _Note: If you are late, please reach out to us over
 
 The following map shows the **8-minute walk** from the _Greensboro Metro Station_.
 
-![](/meetings/metro_to_ridgeline.png)
+![](/locations/metro_to_ridgeline.png)
 
 # Parking {#parking}
 
@@ -31,10 +31,10 @@ is labeled "Public Parking: 8251 & 8255 Greensboro".
 
 DO NOT USE THE BOOZE-ALLEN-HAMILTON PARKING DECK.
 
-![](/meetings/parking_at_ridgeline.png)
+![](/locations/parking_at_ridgeline.png)
 
 This is a controlled parking deck, and **validated "chaser" tickets will
 be available at the meeting** so participants will not be charged for parking.
 
-![](/meetings/edwin_parking.jpeg)
+![](/locations/edwin_parking.jpeg)
 

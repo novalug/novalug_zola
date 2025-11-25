@@ -6,7 +6,7 @@ title = "Solution Street Meeting Location"
 
 This meeting location is at [Solution Street](https://solutionstreet.com/). 
 
-![](/meetings/solutions_street_505_huntmar_back.jpg)
+![](/locations/solutions_street_505_huntmar_back.jpg)
 
 Address:
 
@@ -29,14 +29,14 @@ a few days before the meeting, and we will arrange to pick you up at the Herndon
 
 There is plenty of free parking at this building.
 
-![](/meetings/solutions_street_505_huntmar_front.jpg)
+![](/locations/solutions_street_505_huntmar_front.jpg)
 
 # Eat Kabobs
 
 And while you are in Herndon, be sure to stop by the best kabob house in Northern Virginia,
 Charcoal Kabobs.
 
-![](/meetings/charcoal_kabobs.jpg)
+![](/locations/charcoal_kabobs.jpg)
 
     394 Elden St,
     Herndon, VA 20170
