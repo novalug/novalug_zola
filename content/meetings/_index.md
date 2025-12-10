@@ -6,18 +6,20 @@ template = "section.html"
 
 NoVaLUG holds monthly, in-person meetings with or without a keynote presentation.
 Meetings are normally held the third Saturday of the month from 10am to Noon.
-Please check our
-[Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H),
-or  [Fediverse](https://akk.novalug.org/@novalug) in case of unexpected schedule changes.
 
-We calendar our events on Mobilizon:
-* [novalug@Mobilizon.us](https://mobilizon.us/@novalug)
-* Subscribe to the calendar feed: [webcal](webcal://mobilizon.us/@novalug/feed/ics)
+We calendar our events on Mobilizon. You can get meeting information in the following ways.
+* Click her to view on [Mobilizon.us](https://mobilizon.us/@novalug)
+* Click [here](webcal://mobilizon.us/@novalug/feed/ics) to open your calendar app and subscribe.
+* Import our calendar via URL: <https://mobilizon.us/@novalug/feed/ics>.
+* Follow our fediverse (aka Mastodon) meeting reminder: [@meetings@novalug.org](https://akk.novalug.org/meetings).
+* Subscribe to our [NoVaLUG Mobilizon RSS feed](https://mobilizon.us/@novalug/feed/atom).
+
+Please check our [Fediverse](https://akk.novalug.org/@novalug) account in case of unexpected schedule changes.
 
 Meetings:
 =========
 
-The following events are from the [NoVaLUG Mobilizon RSS feed](https://mobilizon.us/@novalug/feed/atom).
+Most meetings, but not all, are streamed. Go here for [the stream](https://links.novalug.org/stream). The following events are currently scheduled:
 
 <div id="feed"></div>
 

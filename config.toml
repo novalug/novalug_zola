@@ -30,8 +30,9 @@ menu_items = [
     # $BASE_URL is going to be substituted by base_url from configuration
     {name = "Home", url = "$BASE_URL"},
     {name = "Meetings", url = "$BASE_URL/meetings"},
-    {name = "Tech News", url = "$BASE_URL/news"},
+    {name = "Participate", url = "$BASE_URL/participate"},
     {name = "Pictures", url = "$BASE_URL/pics"},
+    {name = "Tech News", url = "$BASE_URL/news"},
     {name = "Jobs Board", url = "https://links.novalug.org/jobs"},
     {name = "List of Lists", url = "https://links.novalug.org/lists"}
 ]
