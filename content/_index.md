@@ -19,16 +19,8 @@ can be found [here](@/meetings/_index.md).
 Our publicly visible announcements can be viewed on our
 [Fediverse (aka mastodon)](https://akk.novalug.org/novalug) account without the need to log in to any services.
 
-Announcements are also sent to mailing list, Signal, and LinkedIn.
-
 # Join and Participate
 
-See our [List of Lists](https://links.novalug.org/lists) for links to where we hange out online and other resources.
-
-# Contact Us
-
-If you would like contact to NoVaLUG, 
-please join the mailing list, use Signal, or DM us over the Fediverse.
-
+We have many places to hang-out [online](@/participate/_index.md)
 
 
