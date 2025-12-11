@@ -15,9 +15,6 @@ Address:
 
 --> Google [Map](https://maps.app.goo.gl/Khbej6vji4HrPonP7)
 
-_Note: If you are late, please reach out to us over
-[Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)._
-
 # Metro Rail Access {#metro}
 
 The following map shows the **8-minute walk** from the _Greensboro Metro Station_.
