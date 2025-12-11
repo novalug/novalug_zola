@@ -31,16 +31,19 @@ To use this server with other clients, such as mobile apps, use the full host na
 
 If you prefer the "classic" Mastodon UI, go [here](https://akk.novalug.org/web).
 
-## Clients
-
-In general, clients that work with Mastodon also work with Akkoma but this isn't always the case.
-Please visit this page for [a list of Akkoma clients](https://docs.akkoma.dev/stable/clients/).
-
-Specifically for iOS, "MetaText" works well with Akkoma.
-
 ## Content
 
 In addition to content that naturally flows to the NoVaLUG instance via federation, our instance
 also subscribes to a number of relays to pull in technical topics relevant to Linux and open
 source software.
 
+## Clients
+
+In general, clients that work with Mastodon and Pleroma also work with Akkoma but this isn't always the case.
+Please visit this page for [a list of Akkoma clients](https://docs.akkoma.dev/stable/clients/).
+
+Specifically for iOS, "MetaText" works well with Akkoma.
+
+{{ gallery(paths=["screenshots/masto_ui_desktop.png", "screenshots/akkoma_ui_desktop.png"]) }}
+
+{{ gallery(paths=["screenshots/masto_ui_mobile.PNG", "screenshots/meta_text_ui.PNG", "screenshots/akkoma_ui_mobile.PNG"]) }}

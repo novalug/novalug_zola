@@ -42,3 +42,8 @@ Our Matrix server has several custom bots. The commands are as follows:
 There are many clients for Matrix, including desktop and mobile. Go here for [a list of Matrix clients](https://matrix.org/ecosystem/clients).
 
 Some clients require the "homeserver" to be configured explicitly. Use `synapse.matrix.novalug.org` when this is needed.
+
+
+{{ gallery(paths=["screenshots/element_desktop.png", "screenshots/fluffy_chat.png", "screenshots/iamb.gif"]) }}
+
+{{ gallery(paths=["screenshots/element_x.PNG", "screenshots/element_x_2.PNG"]) }}
