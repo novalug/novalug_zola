@@ -35,7 +35,7 @@ Our Matrix server has several custom bots. The commands are as follows:
 - `!echo <message>` - Echo the message back to you.
 - `!xkcd` - Get an XKCD comic.
 - `!ud <term>` - Look up a term in the Urban Dictionary.
-- `!spongebog` - Put last message in alternating caps.
+- `!spongebob` - Put last message in alternating caps.
 
 ## Clients
 
