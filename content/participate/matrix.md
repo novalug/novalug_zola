@@ -40,6 +40,7 @@ Our Matrix server has several custom bots. The commands are as follows:
 ## Clients
 
 There are many clients for Matrix, including desktop and mobile. Go here for [a list of Matrix clients](https://matrix.org/ecosystem/clients).
+For mobile apps, [Element X](https://matrix.org/ecosystem/clients/element-x/) is the newer of the apps.
 
 Some clients require the "homeserver" to be configured explicitly. Use `synapse.matrix.novalug.org` when this is needed.
 
