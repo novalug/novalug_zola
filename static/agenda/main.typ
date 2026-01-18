@@ -1,88 +1,129 @@
-#import "@preview/minimal-presentation:0.7.0": *
+#let meeting_date = "21 February 2026"
+#let background_color = black.lighten(7%)
+#show link: set text(fill: yellow.darken(30%))
+#show link: underline
+#show raw: it => {
+  if not it.block {
+    // Style for single backticks
+    text(
+      font: "Source Code Pro", // Change to your preferred mono font
+      fill: green,   // A nice reddish color
+      it
+    )
+  } else {
+    // Keep blocks looking normal (or apply different styles)
+    it
+  }
+}
 
-//#set text(font: "Lato")
-//#show math.equation: set text(font: "Lato Math")
-#show raw: set text(font: "DejaVu Sans Mono")
-
-#show: project.with(
-  title: "Northern Virginia Linux Users Group",
-  sub-title: "Meeting Agenda",
-  author: "NoVaLUG",
-  date: "01/17/2026",
-  index-title: "This Page Unintentionally Left Blank",
-  logo: image("../novalug_logo2.jpeg"),
-  logo-light: image("../novalug_logo2.jpeg"),
-  cover: image("../meetings_logo.png"),
-  main-color: rgb("#E30512"),
-  lang: "en",
+#set page(
+  width: 320mm, height: 200mm,
+  fill: background_color, margin: (left: 2%, right: 2%),
 )
 
-== Meeting Logistics
+#set align(center + horizon)
+#set text(fill: white, font: "Droid Sans", size:24pt)
 
-#columns-content()[
-  #figure(
-    image("../novalug_logo3.jpeg", width: 100%),
-  ) 
-][
-  - *YOU MUST SIGN-IN* https://links.novalug.org/signin
+#image("../meetings_logo.png", height: 80%)
+#linebreak()
+NoVaLUG - #meeting_date
+#pagebreak()
+#set page(
+  width: 320mm, height: 200mm,
+  fill: background_color, margin: (left: 2%, right: 2%, top: 2%, bottom: 2%),
+  header: [
+    #set align(right + horizon)
+    #set text(size: 20pt, fill: blue)
+    #rect(width: 100%, stroke: background_color) 
+      #stack(
+        dir: ltr,
+        align(left)[#meeting_date],
+        align(right)[Northern Virginia Linux Users Group],
+        rect(width: 16pt, stroke: background_color),
+        image("../novalug_logo2.jpeg", height: 400%),
+      )
+  ]
+)
+#set align(left)
+#set text(fill: white, font: "Droid Sans", size:26pt)
+
+#columns(2, gutter: 15pt)[
+  #image("../novalug_logo3.jpeg")
+  #colbreak()
+  = Meeting Logistics
+  - *YOU MUST SIGN-IN*
+    - #link("https://links.novalug.org/signin")[https://links.novalug.org/signin]
   - Many thanks to Solution Street for hosting us and supplying bagels and coffee.
   - This meeting is being recorded and streamed.
 ]
 
-== New Comers
+#pagebreak()
 
-#columns-content()[
-  #set text(2em)
+#columns(2, gutter: 15pt)[
+  = New Comers
   Raise your hand if this is your first NoVaLUG meeting.
-][
-  #figure(
-    image("../novalug_logo4.jpeg", width: 100%),
-  ) 
+  #colbreak()
+  #image("../novalug_logo4.jpeg")
+
 ]
 
-== Meeting Notes
+#pagebreak()
 
-Please put any meeting comments or notes or links to relevant items
-in the `general` room/channel of our Matrix or Discord servers (they are bridged).
+= Meeting Notes
 
-- Matrix: https://links.novalug.org/matrix
-- Discord: https://links.novalug.org/discord
+Please put meeting comments or notes or links to relevant items in the `general` meeting room/channel of our Matrix or Discord servers (they are bridged).
 
-== Future Meetings
+- Matrix: #link("https://links.novalug.org/matrix")[https://links.novalug.org/matrix]
+- Discord: #link("https://links.novalug.org/discord")[https://links.novalug.org/discord]
+
+#pagebreak()
+
+= Future Meetings
 
 If you want to know about our future meetings:
-- https://novalug.org/meetings
+- #link("https://novalug.org/meetings")[https://novalug.org/meetings]
 
-Getting meeting updates over:
+Get meeting updates over:
 - RSS
-- webcal
-- ical
+- WebCal
+- iCal
 - Mobilizon
-- fedimoose (e.g., Mastodon)
-- or type *`!meeting`* into our Matrix or Discord server.
+- fedimoose (aka Mastodon)
+- or type `!meeting` into Matrix or Discord.
 
-== Call for Presentations
+#pagebreak()
 
-- Do you have a Linux or FOSS related topic you want to share?
-- Length: from 15 minutes to 1.5 hours.
-- Scope: beginner to advanced, we take it all!
-- Polish: any shine of your choice
-
-See Andy or Matt after the meeting to volunteer.
-
-== Upcoming Presentations
+= Upcoming Meetings & Presentations
 
 #table(
   columns: 2,
-  fill: (x, y) => if calc.odd(y) { gray.lighten(80%) },
+  fill: (x, y) => 
+    if y == 0 { blue.darken(50%) }
+    else if calc.even(y) {gray.darken(75%)},
   [Date], [Topic],
   [21 February], [NuShell - A Different Type of Shell],
   [21 March], [InstallFest for Windows 11 Refugees],
+  [18 April], [Your Presentation Here],
 )
 
-We meet even if there is no keynote.
+#pagebreak()
 
-== Participate in NoVaLug Between Meetings
+= Call For Presentations
+#linebreak()
+Do you have a Linux or Free/Open Source related topic you want to share?
+#linebreak()
+#linebreak()
+Presentations can be:
+- length: from 15 minutes to 90 minutes
+- scope: beginner to advanced (we take it all!)
+- polish: any shine of your choice
+
+#linebreak()
+See one of the organizers after the meeting to volunteer.
+
+#pagebreak()
+= Participate in NoVaLUG Between Meetings
+(aka online)
 
 - Mailing List: https://links.novalug.org/list
 - Fedimoose (aka Mastodon). If you don't have a fediverse account, you can create one on our server: https://links.novalug.org/fedimoose
@@ -91,22 +132,24 @@ We meet even if there is no keynote.
   - Discord: https://links.novalug.org/discord
   - WE HAVE BOTS! type *`!help`*
 
-== Tech News You Can Use
+#pagebreak()
 
-#columns-content()[
-  #figure(
-    image("../tech_news_logo.png", width: 100%),
-  ) 
-][
+#columns(2, gutter: 15pt)[
+  #image("../tech_news_logo.png")
+  #colbreak()
   Let's review the latest tech news at https://novalug.org/news
 ]
 
-== Key Note
-#columns-content()[
-  #figure(
-    image("../meetings_logo.png", width: 100%),
-  ) 
-][
-  #set text(2em)
-  Make Brian Lunduke Angry, Learn to Program in Rust.  
+#pagebreak()
+
+#align(center)[
+  KeyNote:
+
+  = Title to Keynote
+  *Subtitle Here*
+  #linebreak()
+  _ Presenter Name _
+
+  A description of the presentation here.
+
 ]
