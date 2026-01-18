@@ -45,7 +45,8 @@ NoVaLUG - #meeting_date
   ]
 )
 #set align(left)
-#set text(fill: white, font: "Droid Sans", size:26pt)
+#set text(fill: white, font: "IBM Plex Sans", size:26pt)
+#show heading: set text(font: "Aldrich")
 
 #columns(2, gutter: 15pt)[
   #image("../novalug_logo3.jpeg")
@@ -100,6 +101,7 @@ Get meeting updates over:
   fill: (x, y) => 
     if y == 0 { blue.darken(50%) }
     else if calc.even(y) {gray.darken(75%)},
+  inset: 10pt,
   [Date], [Topic],
   [21 February], [NuShell - A Different Type of Shell],
   [21 March], [InstallFest for Windows 11 Refugees],
@@ -145,11 +147,15 @@ See one of the organizers after the meeting to volunteer.
 #align(center)[
   KeyNote:
 
-  = Title to Keynote
-  *Subtitle Here*
+  = NuShell
+  *A Different Type of Shell*
   #linebreak()
-  _ Presenter Name _
+  _Presented by Cali_
 
   A description of the presentation here.
+  The goal of this project is to take the Unix philosophy of shells,
+  where pipes connect simple commands together, and bring it to the modern style of development.
+  Thus, rather than being either a shell, or a programming language, Nushell connects
+  both by bringing a rich programming language and a full-featured shell together into one package.
 
 ]
