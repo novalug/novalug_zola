@@ -22,7 +22,7 @@
 )
 
 #set align(center + horizon)
-#set text(fill: white, font: "Droid Sans", size:24pt)
+#set text(fill: white, font: "Aldrich", size:24pt)
 
 #image("../meetings_logo.png", height: 80%)
 #linebreak()
@@ -57,6 +57,18 @@ NoVaLUG - #meeting_date
   - Many thanks to Solution Street for hosting us and supplying bagels and coffee.
   - This meeting is being recorded and streamed.
 ]
+
+#pagebreak()
+
+= We Represent Our Selves
+
+We stream our meetings because there are people in NoVaLUG who cannot be physically present.
+We attend NoVaLUG as individuals because we are Linux and FOSS enthusiasts.
+
+However, this hasn't stopped certain Internet provocateurs (_cough cough Bryan Lunduke cough cough_)
+from misstating that we represent our employers, governments, religion, etc...
+
+So unless otherwise stated, *we all represent ourselves and nobody else*.
 
 #pagebreak()
 
