@@ -17,7 +17,7 @@
 }
 
 #set page(
-  width: 320mm, height: 200mm,
+  width: 338.67mm, height: 190.6mm,
   fill: background_color, margin: (left: 2%, right: 2%),
 )
 
@@ -29,11 +29,11 @@
 NoVaLUG - #meeting_date
 #pagebreak()
 #set page(
-  width: 320mm, height: 200mm,
+  width: 338.67mm, height: 190.5mm,
   fill: background_color, margin: (left: 2%, right: 2%, top: 2%, bottom: 2%),
   header: [
     #set align(right + horizon)
-    #set text(size: 20pt, fill: blue)
+    #set text(size: 20pt, fill: blue, font: "Aldrich")
     #rect(width: 100%, stroke: background_color) 
       #stack(
         dir: ltr,
@@ -145,6 +145,14 @@ See one of the organizers after the meeting to volunteer.
   - Matrix: https://links.novalug.org/matrix
   - Discord: https://links.novalug.org/discord
   - WE HAVE BOTS! type *`!help`*
+
+#pagebreak()
+= Jobs
+Ghost jobs are a thing.
+
+Help a techie out, post real jobs in `#jobs` on:
+  - Matrix: https://links.novalug.org/matrix
+  - Discord: https://links.novalug.org/discord
 
 #pagebreak()
 

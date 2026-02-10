@@ -22,15 +22,4 @@ symbol for Linux. [Ref: [Wikipedia](https://en.wikipedia.org/wiki/Tux_(mascot))]
 
 # Contact Us
 
-If you would like contact to NoVaLUG, 
-please join the mailing list, use Signal, or DM us over the Fediverse.
-See details below:
-
-* Mailing List
-  * [Subscribe](https://lists.firemountain.net/mailman/listinfo/novalug)
-  * [Archives](https://lists.firemountain.net/pipermail/novalug/)
-* Fediverse (aka mastodon)
-  * [@novalug@novalug.org](https://akk.novalug.org/novalug)
-  * [Invite Link](https://akk.novalug.org/registration/TYQ191BZpP1-4YUlJpQfLRGorHYqpAkR9vJWePJ9h7g=)
-* [Signal](https://signal.group/#CjQKIGYAYkoVLdiHZjUhpfxZBa5s-XIZ8AyrMWo-GQh9lVcJEhBXh7NEH3GOHPYNd2Xhmq8H)
-* [LinkedIn](https://www.linkedin.com/groups/13065244/)
+To contact us, see our [online](@/participate/_index.md) mediums.

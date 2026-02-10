@@ -21,6 +21,6 @@ Our publicly visible announcements can be viewed on our
 
 # Join and Participate
 
-We have many places to hang-out [online](@/participate/_index.md)
+We have many places to hang-out [online](@/participate/_index.md).
 
 
