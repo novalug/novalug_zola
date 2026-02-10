@@ -23,6 +23,7 @@ NoVaLUG Participants
   * [Walt Smith](http://waltech.freeshell.org)
   * [Matt Panhans](https://social.librem.one/@mpanhans)
   * [Ed MacDonald](https://consartist.com)
+  * [John Place](https://unixsage.com)
 
 Other Area Linux User Groups (LUGs)
 -----------------------------------
