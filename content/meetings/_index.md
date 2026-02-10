@@ -19,7 +19,11 @@ Please check our [Fediverse](https://akk.novalug.org/@novalug) account in case o
 Meetings:
 =========
 
-Most meetings, but not all, are streamed. Go here for [the stream](https://links.novalug.org/stream). The following events are currently scheduled:
+Agenda slides may be found [here](https://links.novalug.org/agenda).
+
+Most meetings, but not all, are streamed. Go here for [the stream](https://links.novalug.org/stream).
+
+The following events are currently scheduled:
 
 <div id="feed"></div>
 
