@@ -22,7 +22,7 @@
 )
 
 #set align(center + horizon)
-#set text(fill: white, font: "Aldrich", size:24pt)
+#set text(fill: rgb(255, 191, 0), font: "Aldrich", size:24pt)
 
 #image("../meetings_logo.png", height: 80%)
 #linebreak()
@@ -33,7 +33,7 @@ NoVaLUG - #meeting_date
   fill: background_color, margin: (left: 2%, right: 2%, top: 2%, bottom: 2%),
   header: [
     #set align(right + horizon)
-    #set text(size: 20pt, fill: blue, font: "Aldrich")
+    #set text(size: 20pt, fill: white, font: "Aldrich")
     #rect(width: 100%, stroke: background_color) 
       #stack(
         dir: ltr,
@@ -45,8 +45,12 @@ NoVaLUG - #meeting_date
   ]
 )
 #set align(left)
-#set text(fill: white, font: "IBM Plex Sans", size:26pt)
+#set text(fill: rgb(255, 191, 0), font: "IBM Plex Sans", size:26pt)
+#show link: it => underline(text(fill: blue)[#it])
 #show heading: set text(font: "Aldrich")
+#show heading: it => {
+  underline(it.body) 
+}
 
 #columns(2, gutter: 15pt)[
   #image("../novalug_logo3.jpeg")
@@ -74,6 +78,7 @@ So unless otherwise stated, *we all represent ourselves and nobody else*.
 
 #columns(2, gutter: 15pt)[
   = New Comers
+
   Raise your hand if this is your first NoVaLUG meeting.
   #colbreak()
   #image("../novalug_logo4.jpeg")
@@ -137,7 +142,6 @@ See one of the organizers after the meeting to volunteer.
 
 #pagebreak()
 = Participate in NoVaLUG Between Meetings
-(aka online)
 
 - Mailing List: https://links.novalug.org/list
 - Fedimoose (aka Mastodon). If you don't have a fediverse account, you can create one on our server: https://links.novalug.org/fedimoose
@@ -148,6 +152,7 @@ See one of the organizers after the meeting to volunteer.
 
 #pagebreak()
 = Jobs
+
 Ghost jobs are a thing.
 
 Help a techie out, post real jobs in `#jobs` on:
@@ -168,6 +173,7 @@ Help a techie out, post real jobs in `#jobs` on:
   KeyNote:
 
   = NuShell
+
   *A Different Type of Shell*
   #linebreak()
   _Presented by Cali_
