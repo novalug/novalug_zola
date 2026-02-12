@@ -60,6 +60,9 @@ NoVaLUG - #meeting_date
     - #link("https://links.novalug.org/signin")[https://links.novalug.org/signin]
   - Many thanks to Solution Street for hosting us and supplying bagels and coffee.
   - This meeting is being recorded and streamed.
+  - Agenda slides:
+    - #link("https://links.novalug.org/agenda")[https://links.novalug.org/agenda]
+    - brought to you by Typst
 ]
 
 #pagebreak()
