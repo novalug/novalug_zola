@@ -1,4 +1,4 @@
-#let meeting_date = "21 February 2026"
+#let meeting_date = "21 March 2026"
 #let background_color = black.lighten(7%)
 #show link: set text(fill: yellow.darken(30%))
 #show link: underline
@@ -59,7 +59,6 @@ NoVaLUG - #meeting_date
   - *YOU MUST SIGN-IN*
     - #link("https://links.novalug.org/signin")[https://links.novalug.org/signin]
   - Many thanks to Solution Street for hosting us and supplying bagels and coffee.
-  - This meeting is being recorded and streamed.
   - Agenda slides:
     - #link("https://links.novalug.org/agenda")[https://links.novalug.org/agenda]
     - brought to you by Typst
@@ -123,9 +122,9 @@ Get meeting updates over:
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
   [Date], [Topic],
-  [21 February], [NuShell - A Different Type of Shell],
   [21 March], [InstallFest for Windows 11 Refugees],
-  [18 April], [Your Presentation Here],
+  [18 April], [Meshtastic],
+  [16 May], [Your Presentation Here],
 )
 
 #pagebreak()
@@ -175,16 +174,12 @@ Help a techie out, post real jobs in `#jobs` on:
 #align(center)[
   KeyNote:
 
-  = NuShell
+  = InstallFest for Windows 11 Refugees
 
-  *A Different Type of Shell*
+  *Install And Be Happy*
   #linebreak()
-  _Presented by Cali_
+  _Organized by Tim Montgomery_
 
-  A description of the presentation here.
-  The goal of this project is to take the Unix philosophy of shells,
-  where pipes connect simple commands together, and bring it to the modern style of development.
-  Thus, rather than being either a shell, or a programming language, Nushell connects
-  both by bringing a rich programming language and a full-featured shell together into one package.
+  Go forth and be a penguin!
 
 ]
