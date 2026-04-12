@@ -1,4 +1,4 @@
-#let meeting_date = "21 March 2026"
+#let meeting_date = "18 April 2026"
 #let background_color = black.lighten(7%)
 #show link: set text(fill: yellow.darken(30%))
 #show link: underline
@@ -59,6 +59,7 @@ NoVaLUG - #meeting_date
   - *YOU MUST SIGN-IN*
     - #link("https://links.novalug.org/signin")[https://links.novalug.org/signin]
   - Many thanks to Solution Street for hosting us and supplying bagels and coffee.
+  - This meeting is being streamed.
   - Agenda slides:
     - #link("https://links.novalug.org/agenda")[https://links.novalug.org/agenda]
     - brought to you by Typst
@@ -122,10 +123,13 @@ Get meeting updates over:
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
   [Date], [Topic],
-  [21 March], [InstallFest for Windows 11 Refugees],
   [18 April], [Meshtastic],
-  [16 May], [Your Presentation Here],
+  [16 May], [TBD],
+  [20 June], [TBD],
+  [15 August], [TBD],
 )
+
+We may opt for coffee/happy hours for summer months.
 
 #pagebreak()
 
@@ -174,12 +178,12 @@ Help a techie out, post real jobs in `#jobs` on:
 #align(center)[
   KeyNote:
 
-  = InstallFest for Windows 11 Refugees
+  = Meshtastic
 
-  *Install And Be Happy*
+  *LoRA Mesh Networking*
   #linebreak()
-  _Organized by Tim Montgomery_
+  _Presented by Scarlet_
 
-  Go forth and be a penguin!
+  Mesh networking for the masses
 
 ]
