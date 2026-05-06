@@ -1,4 +1,4 @@
-#let meeting_date = "18 April 2026"
+#let meeting_date = "16 May 2026"
 #let background_color = black.lighten(7%)
 #show link: set text(fill: yellow.darken(30%))
 #show link: underline
@@ -178,12 +178,9 @@ Help a techie out, post real jobs in `#jobs` on:
 #align(center)[
   KeyNote:
 
-  = Meshtastic
+  = Cert Warden
 
-  *LoRA Mesh Networking*
+  *Centralized ACME Certificate Management*
   #linebreak()
-  _Presented by Scarlet_
-
-  Mesh networking for the masses
 
 ]
