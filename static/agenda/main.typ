@@ -182,5 +182,6 @@ Help a techie out, post real jobs in `#jobs` on:
 
   *Centralized ACME Certificate Management*
   #linebreak()
+  _Presented by Chris Hammel_
 
 ]
