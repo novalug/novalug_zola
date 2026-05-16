@@ -123,13 +123,15 @@ Get meeting updates over:
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
   [Date], [Topic],
-  [18 April], [Meshtastic],
-  [16 May], [TBD],
-  [20 June], [TBD],
+  [16 May], [Cert Warden],
+  [13 June], [Coffee Meetup],
+  [20 June], [_No Meeting_],
+  [11 July], [Coffee Metup],
+  [18 July], [_No Meeting_],
   [15 August], [TBD],
 )
 
-We may opt for coffee/happy hours for summer months.
+_Note: No meetings for Jun or July, instead of Coffee Meetups._
 
 #pagebreak()
 
