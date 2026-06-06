@@ -46,3 +46,11 @@ Three Whistles sells coffee, assorted drinks, and food.
 ![](/locations/three_whistles_coffee.jpeg)
 
 ![](/locations/three_whistles_menu.jpeg)
+
+# Meeting Space
+
+There is no reserved meeting space. Just grab a table with the rest of us.
+
+![](/locations/three_whistles_high_table.jpeg)
+
+![](/locations/three_whistles_tables.jpeg)
