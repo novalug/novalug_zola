@@ -1,4 +1,4 @@
-#let meeting_date = "16 May 2026"
+#let meeting_date = "15 August 2026"
 #let background_color = black.lighten(7%)
 #show link: set text(fill: yellow.darken(30%))
 #show link: underline
@@ -123,15 +123,13 @@ Get meeting updates over:
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
   [Date], [Topic],
-  [16 May], [Cert Warden],
-  [13 June], [Coffee Meetup],
-  [20 June], [_No Meeting_],
-  [11 July], [Coffee Metup],
-  [18 July], [_No Meeting_],
-  [15 August], [TBD],
+  [19 September], [Good Vibes with Open Source AI],
+  [17 October], [TBD but planning at MRSL],
+  [November], [Probably Coffee Meetup],
+  [December], [Probably Coffee Meetup],
 )
 
-_Note: No meetings for Jun or July, instead of Coffee Meetups._
+_Note: No meetings for November and December will probably be coffee meetups because many people are out for the holidays._
 
 #pagebreak()
 
@@ -180,9 +178,9 @@ Help a techie out, post real jobs in `#jobs` on:
 #align(center)[
   KeyNote:
 
-  = Cert Warden
+  = Proxmox
 
-  *Centralized ACME Certificate Management*
+  *VMWare But Free and Without the Stupid*
   #linebreak()
   _Presented by Chris Hammel_
 
