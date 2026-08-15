@@ -56,10 +56,7 @@ NoVaLUG - #meeting_date
   #image("../novalug_logo3.jpeg")
   #colbreak()
   = Meeting Logistics
-  - *YOU MUST SIGN-IN*
-    - #link("https://links.novalug.org/signin")[https://links.novalug.org/signin]
-  - Many thanks to Solution Street for hosting us and supplying bagels and coffee.
-  - This meeting is being streamed.
+  - We are guests of the library. Please observe their rules.
   - Agenda slides:
     - #link("https://links.novalug.org/agenda")[https://links.novalug.org/agenda]
     - brought to you by Typst
