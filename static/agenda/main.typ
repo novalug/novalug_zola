@@ -1,4 +1,4 @@
-#let meeting_date = "15 August 2026"
+#let meeting_date = "12 September 2026"
 #let background_color = black.lighten(7%)
 #show link: set text(fill: yellow.darken(30%))
 #show link: underline
@@ -24,7 +24,7 @@
 #set align(center + horizon)
 #set text(fill: rgb(255, 191, 0), font: "Aldrich", size:24pt)
 
-#image("../meetings_logo.png", height: 80%)
+#image("../novalug_neon_sign.png", height: 80%)
 #linebreak()
 NoVaLUG - #meeting_date
 #pagebreak()
@@ -57,6 +57,7 @@ NoVaLUG - #meeting_date
   #colbreak()
   = Meeting Logistics
   - We are guests of the library. Please observe their rules.
+  - This meeting is public, and we might be streaming it.
   - Agenda slides:
     - #link("https://links.novalug.org/agenda")[https://links.novalug.org/agenda]
     - brought to you by Typst
@@ -94,6 +95,8 @@ Please put meeting comments or notes or links to relevant items in the `general`
 - Matrix: #link("https://links.novalug.org/matrix")[https://links.novalug.org/matrix]
 - Discord: #link("https://links.novalug.org/discord")[https://links.novalug.org/discord]
 
+_NOTE: The Discord bridge is down at the moment._
+
 #pagebreak()
 
 = Future Meetings
@@ -120,13 +123,11 @@ Get meeting updates over:
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
   [Date], [Topic],
-  [19 September], [Good Vibes with Open Source AI],
-  [17 October], [TBD but planning at MRSL],
-  [November], [Probably Coffee Meetup],
-  [December], [Probably Coffee Meetup],
+  [17 October], [Lightning Talks],
+  [November], [Coffee Meetup],
+  [December], [Coffee Meetup],
+  [January], [DNSSEC]
 )
-
-_Note: No meetings for November and December will probably be coffee meetups because many people are out for the holidays._
 
 #pagebreak()
 
@@ -153,6 +154,8 @@ See one of the organizers after the meeting to volunteer.
   - Discord: https://links.novalug.org/discord
   - WE HAVE BOTS! type *`!help`*
 
+_NOTE: The Discord bridge is down at the moment._
+
 #pagebreak()
 = Jobs
 
@@ -162,23 +165,23 @@ Help a techie out, post real jobs in `#jobs` on:
   - Matrix: https://links.novalug.org/matrix
   - Discord: https://links.novalug.org/discord
 
-#pagebreak()
+// #pagebreak()
 
-#columns(2, gutter: 15pt)[
-  #image("../tech_news_logo.png")
-  #colbreak()
-  Let's review the latest tech news at https://novalug.org/news
-]
+// #columns(2, gutter: 15pt)[
+//   #image("../tech_news_logo.png")
+//   #colbreak()
+//   Let's review the latest tech news at https://novalug.org/news
+// ]
 
 #pagebreak()
 
 #align(center)[
   KeyNote:
 
-  = Proxmox
+  = Good Vibes with Open Source AI
 
-  *VMWare But Free and Without the Stupid*
+  *Agentic Coding with Local and Open Source AI*
   #linebreak()
-  _Presented by Chris Hammel_
+  _Presented by Andy Newton_
 
 ]
