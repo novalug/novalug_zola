@@ -95,8 +95,6 @@ Please put meeting comments or notes or links to relevant items in the `general`
 - Matrix: #link("https://links.novalug.org/matrix")[https://links.novalug.org/matrix]
 - Discord: #link("https://links.novalug.org/discord")[https://links.novalug.org/discord]
 
-_NOTE: The Discord bridge is down at the moment._
-
 #pagebreak()
 
 = Future Meetings
@@ -123,10 +121,11 @@ Get meeting updates over:
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
   [Date], [Topic],
-  [17 October], [Lightning Talks],
+  [17 October], [ASH: An AI Powered Shell Extension],
   [November], [Coffee Meetup],
   [December], [Coffee Meetup],
-  [January], [DNSSEC]
+  [January], [DNSSEC],
+  [February], [Alternate Linux Distros: Nix and Qubes]
 )
 
 #pagebreak()
@@ -153,8 +152,6 @@ See one of the organizers after the meeting to volunteer.
   - Matrix: https://links.novalug.org/matrix
   - Discord: https://links.novalug.org/discord
   - WE HAVE BOTS! type *`!help`*
-
-_NOTE: The Discord bridge is down at the moment._
 
 #pagebreak()
 = Jobs
