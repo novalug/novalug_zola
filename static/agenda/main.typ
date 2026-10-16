@@ -1,4 +1,4 @@
-#let meeting_date = "12 September 2026"
+#let meeting_date = "17 October 2026"
 #let background_color = black.lighten(7%)
 #show link: set text(fill: yellow.darken(30%))
 #show link: underline
@@ -93,7 +93,7 @@ So unless otherwise stated, *we all represent ourselves and nobody else*.
 Please put meeting comments or notes or links to relevant items in the `general` meeting room/channel of our Matrix or Discord servers (they are bridged).
 
 - Matrix: #link("https://links.novalug.org/matrix")[https://links.novalug.org/matrix]
-- Discord: #link("https://links.novalug.org/discord")[https://links.novalug.org/discord]
+- Discord: #link("https://links.novalug.org/discord")[https://links.novalug.org/discord] (when it is working)
 
 #pagebreak()
 
@@ -115,17 +115,16 @@ Get meeting updates over:
 = Upcoming Meetings & Presentations
 
 #table(
-  columns: 2,
+  columns: 3,
   fill: (x, y) => 
     if y == 0 { blue.darken(50%) }
     else if calc.even(y) {gray.darken(75%)},
   inset: 10pt,
-  [Date], [Topic],
-  [17 October], [ASH: An AI Powered Shell Extension],
-  [November], [Coffee Meetup],
-  [December], [Coffee Meetup],
-  [January], [DNSSEC],
-  [February], [Alternate Linux Distros: Nix and Qubes]
+  [Date], [Topic], [Presenter],
+  [November], [Coffee Meetup], [],
+  [December], [Coffee Meetup], [],
+  [January], [DNSSEC], [Ed Lewis],
+  [February], [Alternate Linux Distros: Nix and Qubes], [Ed MacD!],
 )
 
 #pagebreak()
@@ -169,16 +168,23 @@ Help a techie out, post real jobs in `#jobs` on:
 //   #colbreak()
 //   Let's review the latest tech news at https://novalug.org/news
 // ]
+ 
+#pagebreak()
+= Lunch
+
+Some people tend to walk to lunch together after these meetings.
+
+If interested, hang around and help develop the plans.
 
 #pagebreak()
 
 #align(center)[
   KeyNote:
 
-  = Good Vibes with Open Source AI
+  = ASH
 
-  *Agentic Coding with Local and Open Source AI*
+  *An AI Powered Shell Extension for Linux, BSD, & macOS*
   #linebreak()
-  _Presented by Andy Newton_
+  _Presented by Jon Conradt_
 
 ]
